@@ -33,7 +33,7 @@ $background-color-hover: #ff00ea;
     .badge-container {
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         flex-wrap: wrap;
 
         .badge {

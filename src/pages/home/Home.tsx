@@ -14,10 +14,10 @@ import { BsRouter } from "react-icons/bs";
 import { LiaTruckPickupSolid } from "react-icons/lia";
 import Blog from "../../components/blog/Blog";
 
-const src = "https://media.istockphoto.com/id/1498615280/video/captivating-timelapse-of-slow-cloud-movements-and-play-of-light-at-fully-frozen-pangong-lake.mp4?s=mp4-640x640-is&k=20&c=Q5nYTiysR0ods4zFrOp-9Ln5826o49A_pjs03ob4Pto="
 
 export default function Home() {
 
+  const src = "https://media.istockphoto.com/id/1498615280/video/captivating-timelapse-of-slow-cloud-movements-and-play-of-light-at-fully-frozen-pangong-lake.mp4?s=mp4-640x640-is&k=20&c=Q5nYTiysR0ods4zFrOp-9Ln5826o49A_pjs03ob4Pto="
 
   const videoEl = useRef<HTMLVideoElement>(null); // Provide type assertion
 

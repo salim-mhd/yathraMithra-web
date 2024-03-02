@@ -11,8 +11,8 @@ export default function Welcome() {
             <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rem repudiandae enim porro nulla provident eos molestias sit illum mollitia deserunt voluptatibus corporis ut, nihil ducimus voluptatem harum velit distinctio!</div>
         </div>
         <div className='images'>
-            <div><img src={image1} alt="image-1"  className='image-1'/></div>
-            <div><img src={image2} alt="image-2"  className='image-2'/></div>
+            <div><img src={image1} alt=""  className='image-1'/></div>
+            <div><img src={image2} alt=""  className='image-2'/></div>
         </div>
     </div>
   )

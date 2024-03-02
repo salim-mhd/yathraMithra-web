@@ -1,6 +1,5 @@
 import React from 'react'
 import './Search.scss'
-import Button from '../button/Button'
 
 export default function Search() {
   return (

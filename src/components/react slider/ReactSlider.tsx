@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./ReactSlider.scss";
-import image1 from "../../assets/package images/cf1f7808f4613f11b2d363e3ed028f1d.jpg";
-import image2 from "../../assets/package images/251b300f-89f3-4784-841d-918039f9253d.jpeg";
-import image3 from "../../assets/package images/LADAKH-1.jpeg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button from "../button/Button";
 import { FaArrowRight } from "react-icons/fa";
@@ -34,19 +31,19 @@ export default function ReactSlider() {
   ];
 
   const [active, setActive] = useState<number>(0);
-  const [autoplay, setAutoplay] = useState<boolean>(true);
   const max: number = slides.length;
 
-  const intervalBetweenSlides = () => {
-    autoplay && setActive((prev) => (prev === max - 1 ? 0 : prev + 1));
-  };
-
   useEffect(() => {
+    const intervalBetweenSlides = async () => {
+      setActive((prev) => (prev === max - 1 ? 0 : prev + 1));
+    };
+  
     const interval = setInterval(() => intervalBetweenSlides(), 5000);
+  
     return () => clearInterval(interval);
-  }, [autoplay, max]);
+  }, [max]);
+   
 
-  const toggleAutoPlay = () => setAutoplay((prev) => !prev);
 
 const nextOne = () => {
   setActive((prev) => (prev === max - 1 ? 0 : prev + 1)); // Wrap around to the first slide if at the last slide
@@ -84,13 +81,6 @@ const prevOne = () => {
         </button>
       </li>
     ));
-
-  const renderPlayStop = () =>
-    autoplay ? (
-      <svg fill="#FFFFFF" height="20" viewBox="0 0 24 24" width="24"></svg>
-    ) : (
-      <svg fill="#FFFFFF" height="20" viewBox="0 0 24 24" width="24"></svg>
-    );
 
   const renderArrows = () => (
     <React.Fragment>

@@ -1,6 +1,5 @@
 import React from 'react'
 import "./PackagesComponent.scss"
-import { FaArrowLeft, FaArrowRight, FaLongArrowAltRight } from 'react-icons/fa';
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
 import Package from '../package/Package';
 

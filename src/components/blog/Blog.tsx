@@ -6,7 +6,8 @@ import image from '../../assets/package images/ledakh-3.jpeg'
 export default function Blog() {
   return (
     <div className='Blog'>
-            <img src={image} alt="Image" className='image' />
+
+        <img src={image} alt="Vegetables on sale at the market" className='image'/>
         <div className='content'>
         <div className='fs-6 fw-bold' style={{color:'gray'}}>28-Feb-2024</div>
         <div className='my-2'>
