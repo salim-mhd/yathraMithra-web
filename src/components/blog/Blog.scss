@@ -1,0 +1,48 @@
+$background-color: #79006e;
+
+.Blog {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+
+    .image {
+        width: 27%;
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+
+        @media (max-width: 1380px) {
+            width: 100%;
+        }
+    }
+
+    .content {
+        text-align: start;
+        padding: 10px;
+
+        @media (max-width: 1380px) {
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .read-more-container {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            color: $background-color;
+
+            @media (max-width: 1380px) {
+                justify-content: center;
+                margin-left: 18%;
+            }
+        }
+    }
+}

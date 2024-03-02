@@ -1,0 +1,18 @@
+$background-color: #79006e;
+
+.Button{
+    cursor: pointer;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        transform: scale(1.1,1.1);
+        transition: .5s ease-in-out;
+    }
+}

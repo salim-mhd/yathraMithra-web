@@ -1,0 +1,85 @@
+$background-color: #79006e;
+$background-color-hover: white;
+
+.Navbar {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease; // Add transition for smooth color change
+  
+    &.show-color {
+      background-color: #79006e; // Change this to the desired background color when scrolled to bottom
+    }
+
+
+    .logo {
+        @media (max-width: 810px) {
+            width: 150px;
+        }
+    }
+
+    .menu {
+        margin-right: 50px;
+
+        .menu-contant {
+            position: relative;
+            display: inline-block;
+            color: white; /* Text color */
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            padding-bottom: 4px; /* Add padding-bottom for underline */
+            text-shadow: 1px 1px black;
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2.5px; /* Underline height */
+                background-color: white; /* Underline color */
+            text-shadow: 1px 1px black;
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+                border-radius: 20px;
+            }
+
+            &:hover:before {
+                width: calc(100% - 1px); /* Adjust according to text width */
+                left: 1px; /* Half of padding */
+            }
+
+            @media (max-width: 810px) {
+                display: none;
+            }
+        }
+
+        .active:before {
+            width: calc(100% - 8px); /* Adjust according to text width */
+            left: 5px; /* Half of padding */
+        }
+    }
+
+    .hover-icon {
+        display: none;
+        color: white;
+
+        &:hover {
+            color: $background-color-hover;
+            text-shadow: 1px 1px black;
+            transition: 0.5s;
+        }
+
+        @media (max-width: 810px) {
+            display: block;
+        }
+    }
+}

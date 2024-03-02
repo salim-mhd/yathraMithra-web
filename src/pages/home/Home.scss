@@ -1,0 +1,193 @@
+$background-color: #79006e;
+
+.Home {
+    overflow-y: auto;
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+        z-index: 99999;
+    }
+
+    input {
+        background-color: #79006f23;
+        border-radius: 10px;
+    }
+
+    .Gallery-container {
+        margin: 70px;
+
+        @media (max-width: 400px) {
+            margin: 30px;
+        }
+
+        .gallery-heading-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .text {
+                .text-heading {
+                    font-size: 2.3rem;
+                    font-weight: bold;
+                }
+            }
+
+            .button {
+                background-color: transparent;
+                color: $background-color;
+                border: 2px $background-color solid;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 15px;
+                transition: transform 0.3s ease;
+                margin: 10px;
+
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: $background-color;
+                    color: white;
+                }
+            }
+        }
+
+        .gallery-images-conianer {
+            margin: 15px 0;
+
+            .small-heading {
+                font-weight: bold;
+                text-decoration: underline;
+                text-decoration-color: $background-color;
+                text-decoration-thickness: 2.5px;
+            }
+        }
+
+        .galleries {
+            width: 95%;
+            margin: auto;
+
+            .galleries-content {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                overflow-x: auto;
+                position: relative;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .Fecilities-container {
+        margin: 40px 0;
+        padding: 20px 0;
+        // background-color: $background-color;
+        // color: white;
+
+        @media (max-width: 400px) {
+            margin: 30px;
+        }
+
+        .fecilities-heading {
+            text-align: center;
+        }
+
+        .fecilities-content {
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            .icon-text-container {
+                text-align: center;
+                margin: 10px;
+
+                .icon-container {
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgb(234, 234, 234);
+                    color: $background-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    margin: auto;
+
+
+                    .icon {
+                        font-size: 5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .Blog-container{
+        margin: 70px;
+
+        @media (max-width: 400px) {
+            margin: 30px;
+        }
+
+        .blog-heading-container {
+                .text-heading {
+                    font-size: 2.3rem;
+                    font-weight: bold;
+                }
+        }
+    }
+
+    .Premotion{
+        width: 85%;
+        height: auto;
+        margin: 70px 0;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f8/Rangdum_village_grazing_fields.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .Premotion-text-container{
+            width: 50%;
+            margin: 40px;
+            color: white;
+            @media (max-width: 941px) {
+                width: 100%;
+            }
+
+            .heading{
+                font-size: 2.5rem;
+                font-weight: 600;
+                text-shadow: 2px 2px black;
+            }
+            .paragraph{
+                text-shadow: 1px 0.5px black;
+            }
+        }
+
+        .video{
+            width: 30%;
+            margin: 40px;
+            border-radius: 10px;
+
+            @media (max-width: 941px) {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            border-radius: 50px;
+
+
+            }
+        }
+    }
+}

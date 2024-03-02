@@ -1,0 +1,43 @@
+$background-color: #79006e;
+$background-color-hover: #a9aeb5;
+
+.Footer{
+    background-color: $background-color;
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .full-icons-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px white solid;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 10px;
+    
+            .icon{
+                color: white;
+            }
+
+            &:hover{
+                background-color: white;
+                transition: 1s;
+
+                .icon{
+                    color: $background-color;
+                }
+            }
+        }
+
+    }
+}
