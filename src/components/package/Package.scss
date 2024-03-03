@@ -7,11 +7,11 @@ $background-color-hover: #ff00ea;
     background: #fff;
     margin: 1rem;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 250ms ease-in-out;
     width: 280px;
-    height: 400px;
+    height: 405px;
 
     &:hover {
         transform: scale(1.1, 1.1);
