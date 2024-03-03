@@ -61,7 +61,8 @@ export default function ReactSlider() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [max]);
+  }, [max, slides.length]); // Include slides.length in the dependency array
+
 
   
   const nextOne = () => {
