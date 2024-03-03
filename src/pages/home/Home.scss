@@ -130,7 +130,7 @@ $background-color: #79006e;
         }
     }
 
-    .Blog-container{
+    .Blog-container {
         margin: 70px;
 
         @media (max-width: 400px) {
@@ -138,14 +138,14 @@ $background-color: #79006e;
         }
 
         .blog-heading-container {
-                .text-heading {
-                    font-size: 2.3rem;
-                    font-weight: bold;
-                }
+            .text-heading {
+                font-size: 2.3rem;
+                font-weight: bold;
+            }
         }
     }
 
-    .Premotion{
+    .Premotion {
         width: 85%;
         height: auto;
         margin: 70px 0;
@@ -157,37 +157,46 @@ $background-color: #79006e;
         align-items: center;
         justify-content: space-between;
 
-        .Premotion-text-container{
-            width: 50%;
-            margin: 40px;
+        .Premotion-text-container {
+            width: 40%;
+            margin: 20px 40px;
             color: white;
+    
             @media (max-width: 941px) {
                 width: 100%;
             }
-
-            .heading{
-                font-size: 2.5rem;
-                font-weight: 600;
+    
+            .heading {
+                font-size: 2.7rem;
+                font-weight: 700;
                 text-shadow: 2px 2px black;
+                margin-bottom: 20px;
             }
-            .paragraph{
+    
+            .paragraph {
+                font-size: 1.2rem;
                 text-shadow: 1px 0.5px black;
             }
         }
 
-        .video{
-            width: 30%;
-            margin: 40px;
-            border-radius: 10px;
+        .Premotion-video {
+            width: 40%;
+            height: 300px;
+            margin: 30px;
+            border-radius: 10%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+    
             @media (max-width: 941px) {
-            width: 100%;
-            margin: 0;
-            padding: 30px;
-            border-radius: 50px;
-
-
+                width: 100%;
+                height: 100%;
+                margin: 30px;
+                border-radius: 10%;
             }
         }
     }
+
 }

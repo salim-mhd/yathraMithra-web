@@ -13,24 +13,25 @@ import { GiVacuumCleaner } from "react-icons/gi";
 import { BsRouter } from "react-icons/bs";
 import { LiaTruckPickupSolid } from "react-icons/lia";
 import Blog from "../../components/blog/Blog";
+import ReactPlayer from 'react-player';
 
+const src = "https://youtu.be/hFh0l7rn-LU"
 
 export default function Home() {
 
-  const src = "https://media.istockphoto.com/id/1498615280/video/captivating-timelapse-of-slow-cloud-movements-and-play-of-light-at-fully-frozen-pangong-lake.mp4?s=mp4-640x640-is&k=20&c=Q5nYTiysR0ods4zFrOp-9Ln5826o49A_pjs03ob4Pto="
 
-  const videoEl = useRef<HTMLVideoElement>(null); // Provide type assertion
+  const videoEl = useRef(null); // Provide type assertion
 
-  const attemptPlay = () => {
-    videoEl &&
-      videoEl.current &&
-      videoEl.current.play().catch((error: any) => {
-        console.error("Error attempting to play", error);
-      });
-  };
+  // const attemptPlay = () => {
+  //   videoEl &&
+  //     videoEl.current &&
+  //     videoEl.current.play().catch((error: any) => {
+  //       console.error("Error attempting to play", error);
+  //     });
+  // };
 
   useEffect(() => {
-    attemptPlay();
+    // attemptPlay();
   }, []);
   
   return (
@@ -141,13 +142,16 @@ export default function Home() {
         <div className="heading">Wonderful House experiences nin there!</div>
         <div className="paragraph">Products opronline services or over the Internet. Electronic commerce draws on technologies such as mobile commerce application</div>
         </div>
-        <video
+        <div className="Premotion-video">
+            <ReactPlayer ref={videoEl} url={src} muted={true} playing={true} width="100%" height="250%" />
+        </div>
+        {/* <video
         className="video"
           loop
           muted
           src={src}
           ref={videoEl}
-        />
+        /> */}
       </div>
 
       <Footer />
