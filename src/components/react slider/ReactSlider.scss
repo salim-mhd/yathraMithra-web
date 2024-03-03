@@ -103,24 +103,6 @@ $background-color-hover: #ff00ea;
             }
         }
 
-        // .toggle-play {
-        //     background: transparent;
-        //     border: none;
-        //     height: auto;
-        //     position: absolute;
-        //     width: auto;
-        //     right: 5%;
-        //     bottom: 9px;
-        //     color: #3d3d3d;
-        //     z-index: 1000000;
-
-        //     &:hover {
-        //         text-decoration: none;
-        //         opacity: .7;
-        //         cursor: pointer;
-        //     }
-        // }
-
         .each-slide {
             width: 100vw;
             height: 100vh;
@@ -142,13 +124,16 @@ $background-color-hover: #ff00ea;
     .image-contant {
         position: absolute;
         top: 20%;
+        left: 0;
         z-index: 9995;
+        color: white;
 
         .image-contant-inner {
             color: white;
+            padding: 25px;
 
             .heading {
-                font-size: 5rem;
+                font-size: 4.5rem;
                 font-weight: 700;
                 text-shadow: 2px 2px black;
 
@@ -187,15 +172,26 @@ $background-color-hover: #ff00ea;
         }
 
         @media (max-width: 820px) {
-            top: 15%;
+            top: 25%;
         }
 
         @media (max-width: 540px) {
-            top: 13%;
+            top: 20%;
         }
 
         @media (max-width: 400px) {
-            top: 10%;
+            top: 15%;
         }
     }
+
+    .slide-content {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease-out, transform 4s ease-out;
+      }
+      
+      .slide-content.active {
+        opacity: 0;
+        transform: translateY(-90px);
+      }
 }
