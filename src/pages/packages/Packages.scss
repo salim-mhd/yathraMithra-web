@@ -1,3 +1,6 @@
+$background-color: #79006e;
+$background-hover-color: #55004e;
+
 .Packages {
 
     .package-container {
@@ -29,4 +32,65 @@
             }
         }
     }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+      
+        .btn-style {
+          background-color: black;
+          // color: $main-text-color;
+          // border-color: $button-color;
+          font-weight: 500;
+      
+          &:hover {
+            background-color: red;
+          }
+        }
+      
+        li {
+          margin: 0 5px;
+          display: flex;
+      
+          a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            background-color: $background-color;
+      
+            &:hover {
+              background-color: $background-hover-color;
+            }
+          }
+      
+          &.active a {
+            background-color: #36454F !important;
+            color: #fff !important;
+            border-color: #36454F !important;
+          }
+      
+          &.disabled a {
+            pointer-events: none;
+            opacity: 0.6;
+          }
+      
+          &.break-me a {
+            cursor: default;
+          }
+      
+        }
+      
+        @media (max-width: 768px) {
+          flex-wrap: wrap;
+      
+          li {
+            margin: 5px;
+          }
+        }
+      }
 }

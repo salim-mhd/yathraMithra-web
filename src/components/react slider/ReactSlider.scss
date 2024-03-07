@@ -179,15 +179,15 @@ $background-color-hover: #ff00ea;
         }
 
         @media (max-width: 820px) {
-            top: 25%;
-        }
-
-        @media (max-width: 540px) {
             top: 20%;
         }
 
+        @media (max-width: 540px) {
+            top: 18%;
+        }
+
         @media (max-width: 400px) {
-            top: 15%;
+            top: 10%;
         }
     }
 
