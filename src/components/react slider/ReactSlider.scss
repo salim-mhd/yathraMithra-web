@@ -97,8 +97,13 @@ $background-color-hover: #ff00ea;
                         cursor: pointer;
                     }
                 }
+
+                @media (max-width: 540px) {
+                    font-size: larger;
+                }
+
                 @media (max-width: 400px) {
-                    padding: 2px;
+                    font-size: large;
                 }
             }
         }
