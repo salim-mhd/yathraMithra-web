@@ -3,7 +3,7 @@ import './Blog.scss'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import image from '../../assets/package images/ledakh-3.jpeg'
 
-export default function Blog() {
+export default function BlogComponent() {
   return (
     <div className='Blog'>
 

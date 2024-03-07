@@ -12,8 +12,8 @@ import GalleryHeading from "../../components/gallery heading component/GalleryHe
 import { GiVacuumCleaner } from "react-icons/gi";
 import { BsRouter } from "react-icons/bs";
 import { LiaTruckPickupSolid } from "react-icons/lia";
-import Blog from "../../components/blog/Blog";
 import ReactPlayer from 'react-player';
+import BlogComponent from "../../components/blog/Blog";
 
 const src = "https://youtu.be/hFh0l7rn-LU"
 
@@ -109,7 +109,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-heading"></div>
 
       <div className="Blog-container">
         <div className="blog-heading-container">
@@ -122,16 +121,16 @@ export default function Home() {
         <div className="m-4 text-center">
           <div className="row">
             <div className="col-md-6">
-              <Blog />
+              <BlogComponent />
             </div>
             <div className="col-md-6">
-              <Blog />
+              <BlogComponent />
             </div>
             <div className="col-md-6">
-              <Blog />
+              <BlogComponent />
             </div>
             <div className="col-md-6">
-              <Blog />
+              <BlogComponent />
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ $background-color-hover: white;
                 left: 1px; /* Half of padding */
             }
 
-            @media (max-width: 810px) {
+                        @media (max-width: 980px) {
                 display: none;
             }
         }
@@ -78,8 +78,33 @@ $background-color-hover: white;
             transition: 0.5s;
         }
 
-        @media (max-width: 810px) {
+                @media (max-width: 980px) {
             display: block;
         }
+    }
+}
+
+.hover-navbar-container {
+    background-color: $background-color;
+    color: white;
+    position: fixed;
+    top: 13%;
+    width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 99999;
+
+    .content {
+        padding: 10px;
+        border-radius: 10px;
+
+
+        &:hover {
+            background-color: #5f0057;
+        }
+    }
+
+    .content-hover{
+        background-color: #5f0057;
     }
 }

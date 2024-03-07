@@ -1,0 +1,78 @@
+$background-color: #79006e;
+
+.About {
+    .about-container {
+
+        .about-heading-container {
+            color: white;
+            padding: 20% 0;
+            background-image: url('https://media.istockphoto.com/id/652147598/photo/panorama-of-a-nature-and-landscape-view-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=OAub9_gk0T10jIcM4HXiygFfn_xDChfrNkab-5xnj4c=');
+            text-align: center;
+            margin-bottom: 3%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+
+            @media (min-width: 590px) {
+                padding: 10% 0;
+            }
+
+            .heading {
+                font-size: 2.3rem;
+                font-weight: bold;
+                text-shadow: 2px 2px black;
+            }
+
+            .paragraph {
+                font-size: 1rem;
+                font-weight: 600;
+                text-shadow: 1px .5px black;
+            }
+        }
+
+        .Fecilities-container {
+            margin: 40px 0;
+            padding: 20px 0;
+            // background-color: $background-color;
+            // color: white;
+    
+            @media (max-width: 400px) {
+                margin: 30px;
+            }
+    
+            .fecilities-heading {
+                text-align: center;
+            }
+    
+            .fecilities-content {
+                margin: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+    
+                .icon-text-container {
+                    text-align: center;
+                    margin: 10px;
+    
+                    .icon-container {
+                        width: 150px;
+                        height: 150px;
+                        background-color: rgb(234, 234, 234);
+                        color: $background-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        margin: auto;
+    
+    
+                        .icon {
+                            font-size: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

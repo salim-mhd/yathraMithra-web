@@ -30,7 +30,7 @@ export default function ReactSlider() {
       paragraph: "Explore the beauty of nature.",
     },
     {
-      eachSlide: `url(https://tornavacations.com/wp-content/uploads/2022/05/242-2423564_leh-ladakh-images-hd.jpg)`,
+      eachSlide: `url(https://media.istockphoto.com/id/652147598/photo/panorama-of-a-nature-and-landscape-view-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=OAub9_gk0T10jIcM4HXiygFfn_xDChfrNkab-5xnj4c=)`,
       heading: "Life is either a daring adventure or nothing at all.",
       paragraph: "Explore the beauty of nature.",
     },
