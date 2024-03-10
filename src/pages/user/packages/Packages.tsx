@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Packages.scss"
-import Navbar from '../../components/navbar/Navbar'
-import Package from '../../components/package/Package'
-import Footer from '../../components/footer/Footer'
+import Navbar from '../../../components/user/navbar/Navbar'
+import Package from '../../../components/user/package/Package'
+import Footer from '../../../components/user/footer/Footer'
 import ReactPaginate from 'react-paginate'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 

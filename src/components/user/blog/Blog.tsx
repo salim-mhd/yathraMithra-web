@@ -1,7 +1,7 @@
 import React from 'react'
 import './Blog.scss'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import image from '../../assets/package images/ledakh-3.jpeg'
+import image from '../../../assets/package images/ledakh-3.jpeg'
 
 export default function BlogComponent() {
   return (

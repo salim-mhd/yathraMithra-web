@@ -1,19 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import "./Home.scss";
-import Navbar from "../../components/navbar/Navbar";
-import ReactSlider from "../../components/react slider/ReactSlider";
-import Footer from "../../components/footer/Footer";
-import Search from "../../components/search/Search";
-import PackagesComponent from "../../components/packages/PackagesComponent";
-import FeedBack from "../../components/feedback/FeedBack";
-import Welcome from "../../components/welcome container/Welcome";
+import Navbar from "../../../components/user/navbar/Navbar";
+import ReactSlider from "../../../components/user/react slider/ReactSlider";
+import Footer from "../../../components/user/footer/Footer";
+import Search from "../../../components/user/search/Search";
+import PackagesComponent from "../../../components/user/packages/PackagesComponent";
+import FeedBack from "../../../components/user/feedback/FeedBack";
+import Welcome from "../../../components/welcome container/Welcome";
 import { IoArrowForward } from "react-icons/io5";
-import GalleryHeading from "../../components/gallery heading component/GalleryHeading";
+import GalleryHeading from "../../../components/user/gallery heading component/GalleryHeading";
 import { GiVacuumCleaner } from "react-icons/gi";
 import { BsRouter } from "react-icons/bs";
 import { LiaTruckPickupSolid } from "react-icons/lia";
 import ReactPlayer from 'react-player';
-import BlogComponent from "../../components/blog/Blog";
+import BlogComponent from "../../../components/user/blog/Blog";
 
 const src = "https://youtu.be/hFh0l7rn-LU"
 

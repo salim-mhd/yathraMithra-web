@@ -1,6 +1,6 @@
 import React from "react";
 import "./GalleryHeading.scss";
-import image1 from "../../assets/package images/LADAKH-1.jpeg";
+import image1 from "../../../assets/package images/LADAKH-1.jpeg";
 
 export default function GalleryHeading() {
   return (

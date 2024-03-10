@@ -1,7 +1,7 @@
 import React from 'react'
 import "./About.scss"
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
+import Navbar from "../../../components/user/navbar/Navbar";
+import Footer from "../../../components/user/footer/Footer";
 import { LiaTruckPickupSolid } from "react-icons/lia";
 import { BsRouter } from "react-icons/bs";
 import { GiVacuumCleaner } from "react-icons/gi";

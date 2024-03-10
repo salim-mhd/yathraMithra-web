@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.scss";
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
+import Navbar from "../../../components/user/navbar/Navbar";
+import Footer from "../../../components/user/footer/Footer";
 
 export default function Contact() {
   return (

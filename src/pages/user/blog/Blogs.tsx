@@ -1,8 +1,8 @@
 import React from "react";
 import "./Blogs.scss";
-import Navbar from "../../components/navbar/Navbar";
-import BlogComponent from "../../components/blog/Blog";
-import Footer from "../../components/footer/Footer";
+import Navbar from "../../../components/user/navbar/Navbar";
+import BlogComponent from "../../../components/user/blog/Blog";
+import Footer from "../../../components/user/footer/Footer";
 
 export default function Blogs() {
   return (

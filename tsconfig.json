@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/pages/admin/package managment/PackageManagment.tsx"  ]
 }
