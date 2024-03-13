@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Home.scss";
 import Navbar from "../../../components/user/navbar/Navbar";
 import ReactSlider from "../../../components/user/react slider/ReactSlider";
@@ -14,6 +14,9 @@ import { BsRouter } from "react-icons/bs";
 import { LiaTruckPickupSolid } from "react-icons/lia";
 import ReactPlayer from 'react-player';
 import BlogComponent from "../../../components/user/blog/Blog";
+import { blog } from "../../../interface/Interface";
+import axios from "axios";
+import { base_url } from "../../../constants/staticData";
 
 const src = "https://youtu.be/hFh0l7rn-LU"
 
@@ -22,17 +25,20 @@ export default function Home() {
 
   const videoEl = useRef(null); // Provide type assertion
 
-  // const attemptPlay = () => {
-  //   videoEl &&
-  //     videoEl.current &&
-  //     videoEl.current.play().catch((error: any) => {
-  //       console.error("Error attempting to play", error);
-  //     });
-  // };
+    // this state for store Blog Details
+    const [blogDeta, setBlogData] = useState<blog[]>([]);
 
-  useEffect(() => {
-    // attemptPlay();
-  }, []);
+  // this fuciton for fetch Blog data
+  const fetchBlogData = async () => {
+    let res = await axios.get(`${base_url}/blog`);
+    console.log("res", res.data.blogs);
+    let responseData = res.data.blogs;
+    setBlogData(responseData);
+  };
+
+  useEffect(()=>{
+    fetchBlogData();
+  },[])
   
   return (
     <div className="Home">
@@ -120,18 +126,11 @@ export default function Home() {
         </div>
         <div className="m-4 text-center">
           <div className="row">
-            <div className="col-md-6">
-              <BlogComponent />
-            </div>
-            <div className="col-md-6">
-              <BlogComponent />
-            </div>
-            <div className="col-md-6">
-              <BlogComponent />
-            </div>
-            <div className="col-md-6">
-              <BlogComponent />
-            </div>
+          {blogDeta.map((blog: any, index :number)=>(
+            <div key={index} className="col-md-6">
+            <BlogComponent heading={blog.heading} content={blog.content} image={blog.image} createDate={blog.createdAt} />
+          </div>
+            ))}
           </div>
         </div>
       </div>

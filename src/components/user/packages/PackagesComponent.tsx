@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./PackagesComponent.scss"
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
 import Package from '../package/Package';
+import axios from 'axios';
+import { base_url } from '../../../constants/staticData';
+import { packageInterface } from '../../../interface/Interface';
 
 function PackagesComponent() {
+    // this state for store Package Details
+    const [packagesData, setPackagesData] = useState<packageInterface[]>([]);
+
+  // this fcunction using for fetch package Details
+  const fetPackgeDetails = async () => {
+    let res = await axios.get(`${base_url}/package`);
+    console.log("res", res.data.packagesDetails);
+    let responseData = res.data.packagesDetails;
+    setPackagesData(responseData);
+  };
+
+  useEffect(()=>{
+    fetPackgeDetails();
+  },[])
+
   return (
     <div className='PackagesComponent'>
         <div className='heading-container my-2'>
@@ -18,11 +36,11 @@ function PackagesComponent() {
         </div>
         <div className='container'>
         <div className='packages'>
-          <Package/>
-          <Package/>
-          <Package/>
-          <Package/>
-          <Package/>
+          {packagesData.map((data:any)=>{
+            return(
+              <Package heading={data.heading} image={data.image} description={data.description} price={data.price} orginalPrice={''} roomRating={0} day={0} night={0} foodTime={0} city={''} state={''} createdAt={''} updatedAt={''} /> 
+            )
+          })}
         </div>
         </div>
     </div>
