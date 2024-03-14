@@ -161,6 +161,8 @@ export default function PackageManagment() {
 
   // this fuciton using for delete a blog
   const handleDeletePackage = (Id: string) => {
+    console.log(Id);
+    
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: "btn btn-success",
@@ -181,6 +183,8 @@ export default function PackageManagment() {
       .then(async (result: any) => {
         if (result.isConfirmed) {
           let res = await axios.delete(`${base_url}/package`, { params: { Id } });
+          console.log("delete",res);
+          
           if (res.status === 200) {
             swalWithBootstrapButtons.fire({
               title: "Deleted!",
