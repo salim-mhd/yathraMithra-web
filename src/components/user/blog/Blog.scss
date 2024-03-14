@@ -11,6 +11,8 @@ $background-color: #79006e;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.30);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
 
     @media (max-width: 980px) {
         width: 350px;
