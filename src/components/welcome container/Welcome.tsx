@@ -7,7 +7,7 @@ export default function Welcome() {
   return (
     <div className='Welcome'>
         <div className='text-container mb-3'>
-            <div className='heading'>Welcome Our <br/> Yathra Mitra</div>
+            <div className='heading'>Welcome To <br/> Yathra Mitra</div>
             <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rem repudiandae enim porro nulla provident eos molestias sit illum mollitia deserunt voluptatibus corporis ut, nihil ducimus voluptatem harum velit distinctio!</div>
         </div>
         <div className='images'>

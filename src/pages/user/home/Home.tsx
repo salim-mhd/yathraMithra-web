@@ -3,7 +3,7 @@ import "./Home.scss";
 import Navbar from "../../../components/user/navbar/Navbar";
 import ReactSlider from "../../../components/user/react slider/ReactSlider";
 import Footer from "../../../components/user/footer/Footer";
-import Search from "../../../components/user/search/Search";
+// import Search from "../../../components/user/search/Search";
 import PackagesComponent from "../../../components/user/packages/PackagesComponent";
 import FeedBack from "../../../components/user/feedback/FeedBack";
 import Welcome from "../../../components/welcome container/Welcome";
@@ -87,9 +87,9 @@ export default function Home() {
     <div className="Home">
       <Navbar option="home" />
       <ReactSlider />
-      <div className="search">
+      {/* <div className="search">
         <Search />
-      </div>
+      </div> */}
       <Welcome />
       <PackagesComponent />
       <FeedBack />
@@ -168,10 +168,10 @@ export default function Home() {
             tortor
           </div>
         </div>
-        <div className="m-4 text-center">
-          <div className="row">
+        <div className="blog-container">
+          <div className="blog">
           {blogDeta.map((blog: any, index :number)=>(
-            <div key={index} className="col-md-6">
+            <div key={index}>
             <BlogComponent heading={blog.heading} content={blog.content} image={blog.image} createDate={blog.createdAt} />
           </div>
             ))}

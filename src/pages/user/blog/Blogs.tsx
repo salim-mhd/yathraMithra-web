@@ -72,9 +72,9 @@ export default function Blogs() {
         </div>
         </div>
         <div className="m-4 text-center">
-          <div className="row">
+          <div>
             {blogDeta.map((blog: any, index :number)=>(
-            <div key={index} className="col-md-6">
+            <div key={index}>
             <BlogComponent heading={blog.heading} content={blog.content} image={blog.image} createDate={blog.createdAt}  />
           </div>
             ))}

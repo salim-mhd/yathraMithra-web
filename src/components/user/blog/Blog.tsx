@@ -52,7 +52,7 @@ const BlogComponent: React.FC<BlogProps> = ({ image, heading, content, createDat
           {displayContent}
 </div>
         </div>
-            <div className='read-more-container'><div className='me-2 text-nowrap'>Read More</div><div><FaArrowRightLong /></div></div>
+            <div className='read-more-container'><div className='m-2 text-nowrap'>Read More</div><div><FaArrowRightLong /></div></div>
         </div>
     </div>
   )

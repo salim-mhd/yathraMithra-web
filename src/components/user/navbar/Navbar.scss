@@ -12,9 +12,9 @@ $background-color-hover: white;
     justify-content: space-between;
     align-items: center;
     transition: background-color 0.3s ease; // Add transition for smooth color change
-  
+
     &.show-color {
-      background-color: #79006e; // Change this to the desired background color when scrolled to bottom
+        background-color: #79006e; // Change this to the desired background color when scrolled to bottom
     }
 
 
@@ -30,13 +30,15 @@ $background-color-hover: white;
         .menu-contant {
             position: relative;
             display: inline-block;
-            color: white; /* Text color */
+            color: white;
+            /* Text color */
             text-decoration: none;
             letter-spacing: 1px;
             font-size: 18px;
             font-weight: 500;
             cursor: pointer;
-            padding-bottom: 4px; /* Add padding-bottom for underline */
+            padding-bottom: 4px;
+            /* Add padding-bottom for underline */
             text-shadow: 1px 1px black;
 
 
@@ -46,26 +48,32 @@ $background-color-hover: white;
                 bottom: 0;
                 left: 50%;
                 width: 0;
-                height: 2.5px; /* Underline height */
-                background-color: white; /* Underline color */
-            text-shadow: 1px 1px black;
+                height: 2.5px;
+                /* Underline height */
+                background-color: white;
+                /* Underline color */
+                text-shadow: 1px 1px black;
                 transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
                 border-radius: 20px;
             }
 
             &:hover:before {
-                width: calc(100% - 1px); /* Adjust according to text width */
-                left: 1px; /* Half of padding */
+                width: calc(100% - 1px);
+                /* Adjust according to text width */
+                left: 1px;
+                /* Half of padding */
             }
 
-                        @media (max-width: 980px) {
+            @media (max-width: 980px) {
                 display: none;
             }
         }
 
         .active:before {
-            width: calc(100% - 8px); /* Adjust according to text width */
-            left: 5px; /* Half of padding */
+            width: calc(100% - 8px);
+            /* Adjust according to text width */
+            left: 5px;
+            /* Half of padding */
         }
     }
 
@@ -79,25 +87,25 @@ $background-color-hover: white;
             transition: 0.5s;
         }
 
-                @media (max-width: 980px) {
+        @media (max-width: 980px) {
             display: block;
         }
     }
 
-    .button-container{
+    .button-container {
         position: absolute;
         top: 80%;
         right: 0;
 
-        .button{
+        .button {
             background-color: $background-color;
             color: white;
             margin: 5px;
             border-radius: 10px;
             padding: 5px 20px;
             border: none;
-    
-            &:hover{
+
+            &:hover {
                 background-color: #4e0047;
             }
         }
@@ -112,7 +120,7 @@ $background-color-hover: white;
     background-color: $background-color;
     color: white;
     position: fixed;
-    top: 20%;
+    top: 14%;
     width: 90%;
     text-align: center;
     border-radius: 10px;
@@ -128,21 +136,21 @@ $background-color-hover: white;
         }
     }
 
-    .content-hover{
+    .content-hover {
         background-color: #5f0057;
     }
 
-    .response-button-container{
+    .response-button-container {
 
-        .button{
+        .button {
             background-color: white;
             color: #4e0047;
             margin: 5px;
             border-radius: 10px;
             padding: 5px 20px;
             border: none;
-    
-            &:hover{
+
+            &:hover {
                 background-color: #4e0047;
                 color: white;
             }

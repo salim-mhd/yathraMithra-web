@@ -25,8 +25,7 @@ $background-color-hover: #ff00ea;
     .images {
         position: relative;
         width: 50%;
-        height: 500px;
-        /* Adjust the height as per your requirement */
+        height: 500px; /* Adjust the height as per your requirement */
 
         .image-1 {
             position: absolute;
@@ -35,7 +34,8 @@ $background-color-hover: #ff00ea;
             z-index: 2;
             width: 60%;
             height: 60%;
-            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30)
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30);
+            object-fit: cover; /* Ensure the image covers the entire container */
         }
 
         .image-2 {
@@ -45,7 +45,8 @@ $background-color-hover: #ff00ea;
             z-index: 1;
             width: 75%;
             height: 75%;
-            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30)
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30);
+            object-fit: cover; /* Ensure the image covers the entire container */
         }
     }
 
@@ -64,18 +65,15 @@ $background-color-hover: #ff00ea;
                 top: 0;
                 right: 0;
                 z-index: 2;
-                width: 60%;
-                height: 30%;
+                width: 100%;
+                height: 100%;
             }
     
             .image-2 {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: 1;
-                width: 90%;
-                height: 65%;
-                box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30)
+                display: none; /* Hide image2 at 1200px */
+                width: 0;
+                height: 0;
+                overflow: hidden;
             }
         }
       }

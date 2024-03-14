@@ -2,7 +2,7 @@ $background-color: #79006e;
 $background-color-hover: #ff00ea;
 
 .Package {
-    width: 280px;
+    width: 300px;
     flex: 1 0 250px;
     box-shadow: 0 1px 1rem -4px #000;
     background: #fff;
@@ -11,7 +11,12 @@ $background-color-hover: #ff00ea;
     border-radius: 10px;
     cursor: pointer;
     transition: all 250ms ease-in-out;
-    height: 405px;
+    height: 450px;
+
+
+    @media (max-width: 400px) {
+        width: 250px;
+    }
 
     &:hover {
         transform: scale(1.1, 1.1);
@@ -23,11 +28,13 @@ $background-color-hover: #ff00ea;
     .package-image {
         width: 100%;
         height: 190px;
-        // background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f8/Rangdum_village_grazing_fields.jpg");
         background-size: cover;
         background-position: center;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+    .heading{
+        height: 80px;
     }
 
     .badge-container {

@@ -84,6 +84,22 @@ $background-color: #79006e;
             }
         }
     }
+    .blog-container{
+        width: 100%;
+        height: auto;
+
+        .blog{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow-x: auto;
+            position: relative;
+
+            &::-webkit-scrollbar {
+                display: none;
+              }
+        }
+    }
 
     .Fecilities-container {
         margin: 40px 0;
