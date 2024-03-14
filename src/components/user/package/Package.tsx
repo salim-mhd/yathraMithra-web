@@ -1,7 +1,7 @@
 import React from 'react'
 import './Package.scss'
 
-import { BsFillPinMapFill } from "react-icons/bs";
+// import { BsFillPinMapFill } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { ImSpoonKnife } from "react-icons/im";
 import { IoBedOutline, IoMoonOutline } from 'react-icons/io5';
