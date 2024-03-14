@@ -204,7 +204,7 @@ export default function Packages() {
           />
         </div>
 
-        <div className="d-flex align-items-center flex-wrap justify-content-center">
+        <div className="d-flex mb-5 align-items-center flex-wrap justify-content-center">
           {packagesData.map((data: any) => {
             return (
               <div>
