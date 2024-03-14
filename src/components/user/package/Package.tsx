@@ -34,7 +34,7 @@ const Package: React.FC<packageProps> = ({ heading, image, description, price, o
       <div className='d-flex align-items-center'>
         {/* <div className='fs-4 me-2'>₹ {orginalPrice}</div>
         <div className='text-decoration-line-through'>₹ {price}</div> */}
-        <div className='fs-5 py-2 heading'>{heading}</div>
+        <div className='fs-5 py-2 package-heading'>{heading}</div>
       </div>
       <div className='badge-container my-1'>
         <div className='badge'><IoBedOutline className='me-1 fs-6'/> <div>{roomRating} Star</div></div>
@@ -44,7 +44,7 @@ const Package: React.FC<packageProps> = ({ heading, image, description, price, o
         <div className='badge'><FaWifi className='me-1 fs-6' /> <div>Free</div></div>
       </div>
       </div>
-      <div className='mt-2 d-flex align-items-center'><BsFillPinMapFill  className='me-2'/> <div>{city}, {state}</div></div>
+      {/* <div className='mt-2 d-flex align-items-center'><BsFillPinMapFill  className='me-2'/> <div>{city}, {state}</div></div> */}
       <hr />
             {/* <div className='d-flex justify-content-end'><button className='button'>More</button></div> */}
             <div className='Expore-div'>

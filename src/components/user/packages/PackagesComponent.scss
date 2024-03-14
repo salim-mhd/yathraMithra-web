@@ -8,6 +8,10 @@ $background-color-hover: #53004c;
         margin: 30px;
     }
 
+    @media (max-width: 780px) {
+        text-align: center; 
+    }
+
     .heading{
         font-size: 2.3rem;
         font-weight: bold;
@@ -47,7 +51,6 @@ $background-color-hover: #53004c;
     .container {
         width: 100%;
         height: auto;
-    
 
         .packages{
             display: flex;
@@ -85,10 +88,6 @@ $background-color-hover: #53004c;
             text-wrap: wrap;
         }
 
-        .z{
-            z-index: 9999999999;
-        }
-
         .button{
             background-color: $background-color;
             color: white;
@@ -98,6 +97,35 @@ $background-color-hover: #53004c;
     
             &:hover{
                 background-color: $background-color-hover;
+            }
+        }
+
+        .view-package-image{
+            width: 40%;
+            margin-right: 50px;
+
+            @media (max-width: 780px) {
+                width: 100%;
+            margin-right: 0;
+
+            }
+        
+        }
+
+        .popup-container{
+            padding: 5px;
+            position: fixed;
+            height: 85%;
+            top: 0;
+            left: 0;
+            right: 0;
+            overflow: auto;
+            z-index: 999999999;
+            border-radius: 20px;
+            margin: 7% 2%;
+
+            .popup-content{
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.30);
             }
         }
 

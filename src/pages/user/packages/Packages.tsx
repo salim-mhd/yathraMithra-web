@@ -11,7 +11,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const packageMockdata = [
   {
-    heading: "Luxury Beach Resort Getaway",
+    heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG, UMLING LA, HANLE, TSO MORIRI",
     image: "https://luxuryescapes.com/inspiration/wp-content/uploads/2023/07/AdobeStock_603464271-scaled.jpeg",
     description: "Escape to a luxury beach resort with breathtaking ocean views.",
     price: "1000",
