@@ -209,19 +209,19 @@ export default function Packages() {
             return (
               <div>
                 <Package
-                  heading={data.heading}
-                  image={data.image}
-                  description={data.description}
-                  price={data.price}
-                  orginalPrice={""}
-                  roomRating={0}
-                  day={0}
-                  night={0}
-                  foodTime={0}
-                  city={""}
-                  state={""}
-                  createdAt={""}
-                  updatedAt={""}
+               heading={data.heading}
+               image={data.image}
+               description={data.description}
+               price={data.price}
+               orginalPrice={data.orginalPrice}
+               roomRating={data.roomRating}
+               day={data.day}
+               night={data.night}
+               foodTime={data.foodTime}
+               city={data.city}
+               state={data.state}
+               createdAt={data.createAt}
+               updatedAt={data.updatedAt}
                 />
               </div>
             );
