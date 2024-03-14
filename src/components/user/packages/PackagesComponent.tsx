@@ -28,14 +28,74 @@ const packageMockdata = [
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
       {
-        day: 9,
-        heading: "Tso Moriri to Leh (220 km) Starting at 9.30 AM",
+        day: 2,
+        heading: "Leh Local Sightseeing.",
         description:
-          "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
+          "Leh hotel - Shanti Stupa – Leh Palace - Market visit - Stay at hotel in Leh",
         image:
           "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
         others:
-          "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
+          "(Breakfast, dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Drass - Leh",
+        description:
+          "Leh hotel - Lamayuru- Kargil - Drass - Leh hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast in Leh hotel & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 4,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride - Nubra Camp in Hunder",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Stok, Dinner and overnight stay at the camp in Hunder, Nubra)",
+      },
+      {
+        day: 5,
+        heading: "Nubra Valley (90+90 Kms) to Turtuk - Nubra Valley Starting at 8.30 AM",
+        description:
+          "Nubra Camp - Turtuk village - Nubra Camp",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp in Nubra)",
+      },
+      {
+        day: 6,
+        heading: "Nubra Vally to Pangong lake (175 km) Starting at 9.30 AM",
+        description:
+          "Nubra Camp - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp at Pangong, Tangse",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra Camp, Dinner and overnight stay at Hotel at Pangong, Tangse)",
+      },
+      {
+        day: 7,
+        heading: "Tangse, Pangong to Hanleh (180 km) Starting at 9.00 AM",
+        description:
+          "Hotel at Tanste, Pangong - Hanleh Homestay",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel at Pangong, Dinner and overnight stay at Hanleh Homestay)",
+      },
+      {
+        day: 8,
+        heading: "Hanle to Umling la to Tso Moriri (80km + 80km + 160km) Starting at 9.30 AM",
+        description:
+          "Homestay in Hanle - Umling la - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel in Hanle, Dinner and overnight stay at the homestay in Tso Moriri)",
       },
       {
         day: 9,
@@ -47,6 +107,12 @@ const packageMockdata = [
         others:
           "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
       },
+      {
+        day: 10,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
     ],
     transportation:
       "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
@@ -54,125 +120,43 @@ const packageMockdata = [
       "Leh Ladakh 04 Nights, Nubra Valley 02 Night, Pangong 01 Night, Hanle 01 Night, Tso Moriri 01 Night",
     permits: "Inner Line permits/ Wild Life Fees",
     MedicalSupport:
-      "Medical support if needed Necessary medical/ vitamin tablets",
+      "Medical support if needed, Necessary medical/ vitamin tablets",
     costExcludes:
-      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees.,Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
+      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees., Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
     OtherDetails:
       "Hotel: 3/2-star hotels and 3 -star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van, Guide: If needed, Expected temperature: Between - 10 degrees to 18 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed, due to the lack of availability of cooked food. People can have food from local shops at their, own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
     TermsAndConditions:
       "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double ,",
     day: 10,
     night: 9,
-    Food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
+    food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
     createdAt: "2024-03-07T10:15:00Z",
     updatedAt: "2024-03-07T10:15:00Z",
-  },
-  {
-    heading: "Mountain Cabin Retreat",
-    image:
-      "https://i.pinimg.com/736x/6d/88/d3/6d88d303fa719726b213b4bc35d63395.jpg",
-    description:
-      "Cozy cabin nestled in the mountains, perfect for a serene getaway.",
-    price: "800",
-    orginalPrice: "1000",
-    roomRating: 4.0,
-    day: 3,
-    night: 2,
-    foodTime: 2,
-    city: "Asheville",
-    state: "North Carolina",
-    createdAt: "2024-03-13T09:30:00Z",
-    updatedAt: "2024-03-13T09:30:00Z",
-  },
-  {
-    heading: "Cityscape Hotel Experience",
-    image:
-      "https://media-cdn.tripadvisor.com/media/photo-s/0d/79/45/db/pangong-tso.jpg",
-    description:
-      "Enjoy the hustle and bustle of the city with a stay at a luxurious downtown hotel.",
-    price: "1200",
-    orginalPrice: "1400",
-    roomRating: 4.7,
-    day: 4,
-    night: 3,
-    foodTime: 3,
-    city: "New York City",
-    state: "New York",
-    createdAt: "2024-03-12T15:45:00Z",
-    updatedAt: "2024-03-12T15:45:00Z",
-  },
-  {
-    heading: "Rustic Countryside Retreat",
-    image:
-      "https://www.travelholicq.com/wp-content/uploads/2020/11/Places-To-Visit-In-Ladakh-scaled.jpg",
-    description:
-      "Experience the charm of the countryside in a cozy rustic cabin.",
-    price: "600",
-    orginalPrice: "800",
-    roomRating: 4.2,
-    day: 4,
-    night: 3,
-    foodTime: 2,
-    city: "Sedona",
-    state: "Arizona",
-    createdAt: "2024-03-11T18:20:00Z",
-    updatedAt: "2024-03-11T18:20:00Z",
-  },
-  {
-    heading: "Tropical Island Paradise",
-    image:
-      "https://www.gofero.in//admin/webroot/img/uploads/holiday-package-gallery/1628326168_900312-vamshi-vangapally-fH-BSvYeX5g-unsplash.jpg",
-    description:
-      "Escape to a secluded tropical island for the ultimate relaxation experience.",
-    price: "1500",
-    orginalPrice: "2000",
-    roomRating: 4.8,
-    day: 7,
-    night: 6,
-    foodTime: 4,
-    city: "Maui",
-    state: "Hawaii",
-    createdAt: "2024-03-10T11:00:00Z",
-    updatedAt: "2024-03-10T11:00:00Z",
-  },
-  {
-    heading: "Safari Adventure Camp",
-    image:
-      "https://alpineclubofhimalaya.com/wp-content/uploads/2021/02/beauty-of-ladakh.jpeg",
-    description:
-      "Embark on an unforgettable safari adventure with luxury tent accommodations.",
-    price: "2000",
-    orginalPrice: "2500",
-    roomRating: 4.9,
-    day: 10,
-    night: 9,
-    foodTime: 5,
-    city: "Nairobi",
-    state: "Kenya",
-    createdAt: "2024-03-09T14:10:00Z",
-    updatedAt: "2024-03-09T14:10:00Z",
-  },
-  {
-    heading: "Historic European Castle Stay",
-    image:
-      "https://captureatrip.s3.amazonaws.com/uploads/blog/images/cover/Beyond_the_natural_beauty_of_Ladakh.jpg",
-    description:
-      "Live like royalty in a historic European castle with modern amenities.",
-    price: "1800",
-    orginalPrice: "2200",
-    roomRating: 4.6,
-    day: 6,
-    night: 5,
-    foodTime: 4,
-    city: "Edinburgh",
-    state: "Scotland",
-    createdAt: "2024-03-08T16:50:00Z",
-    updatedAt: "2024-03-08T16:50:00Z",
   },
   {
     heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG, UMLING LA, HANLE, TSO MORIRI",
     subPackage: [
       {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 9,
+        heading: "Tso Moriri to Leh (220 km) Starting at 9.30 AM",
+        description:
+          "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
         day: 9,
         heading: "Tso Moriri to Leh (220 km) Starting at 9.30 AM",
         description:
@@ -198,42 +182,9 @@ const packageMockdata = [
       "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double ,",
     day: 10,
     night: 9,
-    Food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
+    food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
     createdAt: "2024-03-07T10:15:00Z",
     updatedAt: "2024-03-07T10:15:00Z",
-  },
-  {
-    heading: "Alpine Ski Resort Getaway",
-    image:
-      "https://captureatrip.s3.amazonaws.com/uploads/blog/images/cover/Beyond_the_natural_beauty_of_Ladakh.jpg",
-    description: "Hit the slopes and unwind at a luxurious alpine ski resort.",
-    price: "1600",
-    orginalPrice: "2000",
-    roomRating: 4.5,
-    day: 4,
-    night: 3,
-    foodTime: 3,
-    city: "Vail",
-    state: "Colorado",
-    createdAt: "2024-03-06T12:30:00Z",
-    updatedAt: "2024-03-06T12:30:00Z",
-  },
-  {
-    heading: "Desert Glamping Experience",
-    image:
-      "https://c8.alamy.com/comp/E88XP1/namgyal-tsemo-gompa-leh-ladakh-india-asia-E88XP1.jpg",
-    description:
-      "Experience the beauty of the desert in luxury glamping tents under the stars.",
-    price: "1200",
-    orginalPrice: "1500",
-    roomRating: 4.4,
-    day: 3,
-    night: 2,
-    foodTime: 2,
-    city: "Sahara",
-    state: "Morocco",
-    createdAt: "2024-03-05T09:00:00Z",
-    updatedAt: "2024-03-05T09:00:00Z",
   },
 ];
 
@@ -257,7 +208,7 @@ interface TourDetails {
   TermsAndConditions: string;
   day: number;
   night: number;
-  Food: string;
+  food: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -296,6 +247,11 @@ function PackagesComponent() {
 
   const navigage = useNavigate();
 
+  const accommodations = selectdPackage?.accommodation.split(", ");
+  const food = selectdPackage?.food.split(", ");
+  const costExcludes = selectdPackage?.costExcludes.split(", ");
+  const OtherDetails = selectdPackage?.OtherDetails.split(", ");
+
   return (
     <div className="PackagesComponent">
       {isOpenPopup && (
@@ -318,109 +274,107 @@ function PackagesComponent() {
                     {selectdPackage?.night} Nights, {selectdPackage?.day}, Days
                   </div>
                 </div>
-                <div className="d-flex align-items-center justify-content-center m-5 row">
-                  <img
-                    className="rounded view-package-image col-md-6"
-                    src={selectdPackage?.subPackage[0].image}
-                    alt=""
-                  />
-                  <div className="col-md-6">
-                    <div className="my-3 fw-bold">
-                      <div className="fs-3">Day 1</div>
-                      <div className="fs-5">
-                        Leh Airport - Rest In Hotel (5 Km 10 Mints)
+                {selectdPackage &&
+                  selectdPackage?.subPackage.map((data, index) => (
+                    <div
+                      key={index}
+                      className="d-flex align-items-center justify-content-center m-5 row"
+                    >
+                      {data.image && (
+                      <img
+                        className="rounded view-package-image col-md-6"
+                        src={data.image}
+                        alt=""
+                      />
+                      )}
+                      <div className="col-md-6">
+                        <div className="my-3 fw-bold">
+                          <div className="fs-3">Day {data.day}</div>
+                          <div className="fs-5">{data.heading}</div>
+                        </div>
+                        <div className="my-3">{data.description}</div>
+                        <div className="my-3">{data.others}</div>
                       </div>
                     </div>
-                    <div className="my-3">
-                      Arrive at Leh, Meet & greet and transfer to the hotel.
-                      Relax for the rest of the day to acclimatize to the
-                      rarefied air of the high Himalayan Plateau.
-                    </div>
-                    <div className="my-3">
-                      (Breakfast, Lunch & Dinner at hotel, Overnight stay at the
-                      hotel in Leh)
-                    </div>
-                  </div>
-                </div>
+                  ))}
                 <div className="m-5">
-                  <div className="fs-2 fw-bold text-center text-decoration-underline">Cost Includes:</div>
+                  <div className="fs-2 fw-bold text-center text-decoration-underline">
+                    Cost Includes:
+                  </div>
                   <div className="m-3">
-                  <div className="my-3">
-                    <div className="fs-4 fw-bold mb-1">Transportation</div>
-                    <div className="m-3">
-                      Meeting and Assistance on Arrival and Departure Transport
-                      Services as per the itinerary
-                    </div>
-                  </div>
-                  <div className="my-3">
-                    <div className="fs-4 fw-bold mb-1">Accommodation (2/3 Sharing)</div>
-                    <div className="m-3">
-                    <div>Leh Ladakh 04 Nights</div>
-                    <div>Leh Ladakh 04 Nights</div>
-                    <div>Leh Ladakh 04 Nights</div>
-                    <div>Leh Ladakh 04 Nights</div>
-                    </div>
-                  </div>
-                  <div className="my-3">
-                    <div className="fs-4 fw-bold mb-1">Food/Person</div>
-                    <div className="m-3">
-                      <div>11 Breakfast</div>
-                      <div>10 Dinner</div>
-                    </div>
-                  </div>
-                  <div className="my-3">
-                    <div className="fs-4 fw-bold mb-1">Permits and Entry fees</div>
-                    <div className="m-3">Inner Line permits/ Wild Life Fees</div>
-                  </div>
-                  <div className="my-3">
-                    <div className="fs-4 fw-bold mb-1">Medical support</div>
-                    <div className="m-3">
-                      Medical support if needed Necessary medical/ vitamin
-                      tablets
-                    </div>
-                  </div>
-                  <div className="my-3">
-                    <div className="fs-4 fw-bold mb-1">Cost Excludes</div>
-                    <div className="m-3">
-                      <div>Oxygen cylinder</div>
-                      <div>Flight charge</div>
-                      <div>Monastery Entrance at all places of visit</div>
-                      <div>Oxygen cylinder</div>
-                    </div>
                     <div className="my-3">
-                      <div className="fs-4 fw-bold mb-1">Other details</div>
+                      <div className="fs-4 fw-bold mb-1">Transportation</div>
                       <div className="m-3">
-                      <div>Hotel: 3/2-star hotels and 3 -star camps</div>
-                      <div>Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van</div>
+                        {selectdPackage?.transportation}
                       </div>
                     </div>
-                    <div className="text-center my-5">
-                      <div className="fs-4 fw-bold mb-1">Terms and conditions</div>
-                      <p>
-                        Covid-19 protocols for tourists (May change at any time)
-                        Charges for the RT-PCR test should be carried on their
-                        own. Extra medical expenses should be carried on their
-                        own. People having health issues/ Above 50/ can come at
-                        their own risk. RT-PCR test report taken 72 hours prior
-                        to the travel date is mandatory. The passengers who
-                        don’t have RT-PCR negative test reports must be
-                        vaccinated against COVID-19, in order to visit the
-                        tourist spots/public places and must be wearing double
-                        masks
-                      </p>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">
+                        Accommodation (2/3 Sharing)
+                      </div>
+                      <div className="m-3">
+                        {accommodations &&
+                          accommodations.map((accommodation, index) => (
+                            <div key={index}>{accommodation}</div>
+                          ))}
+                      </div>
                     </div>
-                  </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Food/Person</div>
+                      <div className="m-3">
+                        {food &&
+                          food.map((food, index) => (
+                            <div key={index}>{food}</div>
+                          ))}
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">
+                        Permits and Entry fees
+                      </div>
+                      <div className="m-3">{selectdPackage?.permits}</div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Medical support</div>
+                      <div className="m-3">
+                        {selectdPackage?.MedicalSupport}
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Cost Excludes</div>
+                      <div className="m-3">
+                        {costExcludes &&
+                          costExcludes.map((costExcludes, index) => (
+                            <div key={index}>{costExcludes}</div>
+                          ))}
+                      </div>
+                      <div className="my-3">
+                        <div className="fs-4 fw-bold mb-1">Other details</div>
+                        <div className="m-3">
+                          {OtherDetails &&
+                            OtherDetails.map((OtherDetails, index) => (
+                              <div key={index}>{OtherDetails}</div>
+                            ))}
+                        </div>
+                      </div>
+                      <div className="text-center my-5">
+                        <div className="fs-4 fw-bold mb-1">
+                          Terms and conditions
+                        </div>
+                        <p>{selectdPackage?.TermsAndConditions}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="text-center my-5">
-                <button
-                  className="button"
-                  onClick={() => {
-                    navigage("/contact");
-                  }}
-                >
-                  Contact Us
-                </button>
+                  <button
+                    className="button"
+                    onClick={() => {
+                      navigage("/contact");
+                    }}
+                  >
+                    Contact Us
+                  </button>
                 </div>
               </div>
             </div>
@@ -455,7 +409,7 @@ function PackagesComponent() {
                 >
                   <Package
                     heading={data.heading}
-                    image={data.image}
+                    image={data.subPackage[0].image}
                     description={data.description}
                     price={data.price}
                     orginalPrice={data.orginalPrice}
@@ -502,7 +456,7 @@ function PackagesComponent() {
                 >
                   <Package
                     heading={data.heading}
-                    image={data.image}
+                    image={data.subPackage[0].image}
                     description={data.description}
                     price={data.price}
                     orginalPrice={data.orginalPrice}
