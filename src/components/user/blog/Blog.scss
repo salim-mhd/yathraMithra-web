@@ -1,6 +1,7 @@
 $background-color: #79006e;
 
 .Blog {
+    width: 100%;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +29,7 @@ $background-color: #79006e;
         }
 
         .heading {
+            text-wrap: wrap;
             font-size: 1.5rem;
             font-weight: 600;
         }

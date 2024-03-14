@@ -39,6 +39,7 @@ const Navbar: React.FC<NavbarComponent> = ({ option }) => {
         <div>
           <img src={logo} alt="Logo" height={60} className="pb-2 m-2 logo" />
         </div>
+        <div>
         <div className="d-flex menu">
           <div
             className={`mx-4 menu-contant ${option === "home" ? "active" : ""}`}
@@ -97,6 +98,12 @@ const Navbar: React.FC<NavbarComponent> = ({ option }) => {
             Contact us
           </div>
         </div>
+          <div className="mx-5 my-3 button-container">
+            <button className="button">മലയാളം</button>
+            <button className="button">தமிழ்</button>
+            <button className="button">ಕನ್ನಡ</button>
+          </div>
+        </div>
         {showHover ? (
           <IoClose
             className="fs-1 m-3 hover-icon"
@@ -109,6 +116,7 @@ const Navbar: React.FC<NavbarComponent> = ({ option }) => {
           />
         )}
       </div>
+
       {showHover && (
         <div className="d-flex align-items-center justify-content-center">
           <div className="hover-navbar-container">
@@ -166,6 +174,11 @@ const Navbar: React.FC<NavbarComponent> = ({ option }) => {
             >
               Contact us
             </div>
+            <div className="mx-5 my-3 response-button-container">
+            <button className="button">മലയാളം</button>
+            <button className="button">தமிழ்</button>
+            <button className="button">ಕನ್ನಡ</button>
+          </div>
           </div>
         </div>
       )}

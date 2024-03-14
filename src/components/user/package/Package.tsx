@@ -32,8 +32,9 @@ const Package: React.FC<packageProps> = ({ heading, image, description, price, o
       <div className='px-3'>
       <div className='my-1'>
       <div className='d-flex align-items-center'>
-        <div className='fs-4 me-2'>₹ {orginalPrice}</div>
-        <div className='text-decoration-line-through'>₹ {price}</div>
+        {/* <div className='fs-4 me-2'>₹ {orginalPrice}</div>
+        <div className='text-decoration-line-through'>₹ {price}</div> */}
+        <div className=' fs-5 my-2'>{heading}</div>
       </div>
       <div className='badge-container my-1'>
         <div className='badge'><IoBedOutline className='me-1 fs-6'/> <div>{roomRating} Star</div></div>

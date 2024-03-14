@@ -1,50 +1,312 @@
-import React, { useEffect, useState } from 'react'
-import "./PackagesComponent.scss"
-import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
-import Package from '../package/Package';
-import axios from 'axios';
-import { base_url } from '../../../constants/staticData';
-import { packageInterface } from '../../../interface/Interface';
+import React, { useEffect, useState } from "react";
+import "./PackagesComponent.scss";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import Package from "../package/Package";
+// import axios from "axios";
+// import { base_url } from "../../../constants/staticData";
+import { CloseButton } from "react-bootstrap";
+
+import { IoBedOutline, IoMoonOutline } from "react-icons/io5";
+import { FiSun } from "react-icons/fi";
+import { ImSpoonKnife } from "react-icons/im";
+import { FaWifi } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { BsFillPinMapFill } from "react-icons/bs";
+
+const packageMockdata = [
+  {
+    heading: "Luxury Beach Resort Getaway",
+    image: "https://luxuryescapes.com/inspiration/wp-content/uploads/2023/07/AdobeStock_603464271-scaled.jpeg",
+    description: "Escape to a luxury beach resort with breathtaking ocean views.",
+    price: "1000",
+    orginalPrice: "1500",
+    roomRating: 4.5,
+    day: 5,
+    night: 4,
+    foodTime: 3,
+    city: "Miami",
+    state: "Florida",
+    createdAt: "2024-03-14T12:00:00Z",
+    updatedAt: "2024-03-14T12:00:00Z"
+  },
+  {
+    heading: "Mountain Cabin Retreat",
+    image: "https://i.pinimg.com/736x/6d/88/d3/6d88d303fa719726b213b4bc35d63395.jpg",
+    description: "Cozy cabin nestled in the mountains, perfect for a serene getaway.",
+    price: "800",
+    orginalPrice: "1000",
+    roomRating: 4.0,
+    day: 3,
+    night: 2,
+    foodTime: 2,
+    city: "Asheville",
+    state: "North Carolina",
+    createdAt: "2024-03-13T09:30:00Z",
+    updatedAt: "2024-03-13T09:30:00Z"
+  },
+  {
+    heading: "Cityscape Hotel Experience",
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0d/79/45/db/pangong-tso.jpg",
+    description: "Enjoy the hustle and bustle of the city with a stay at a luxurious downtown hotel.",
+    price: "1200",
+    orginalPrice: "1400",
+    roomRating: 4.7,
+    day: 4,
+    night: 3,
+    foodTime: 3,
+    city: "New York City",
+    state: "New York",
+    createdAt: "2024-03-12T15:45:00Z",
+    updatedAt: "2024-03-12T15:45:00Z"
+  },
+  {
+    heading: "Rustic Countryside Retreat",
+    image: "https://www.travelholicq.com/wp-content/uploads/2020/11/Places-To-Visit-In-Ladakh-scaled.jpg",
+    description: "Experience the charm of the countryside in a cozy rustic cabin.",
+    price: "600",
+    orginalPrice: "800",
+    roomRating: 4.2,
+    day: 4,
+    night: 3,
+    foodTime: 2,
+    city: "Sedona",
+    state: "Arizona",
+    createdAt: "2024-03-11T18:20:00Z",
+    updatedAt: "2024-03-11T18:20:00Z"
+  },
+  {
+    heading: "Tropical Island Paradise",
+    image: "https://www.gofero.in//admin/webroot/img/uploads/holiday-package-gallery/1628326168_900312-vamshi-vangapally-fH-BSvYeX5g-unsplash.jpg",
+    description: "Escape to a secluded tropical island for the ultimate relaxation experience.",
+    price: "1500",
+    orginalPrice: "2000",
+    roomRating: 4.8,
+    day: 7,
+    night: 6,
+    foodTime: 4,
+    city: "Maui",
+    state: "Hawaii",
+    createdAt: "2024-03-10T11:00:00Z",
+    updatedAt: "2024-03-10T11:00:00Z"
+  },
+  {
+    heading: "Safari Adventure Camp",
+    image: "https://alpineclubofhimalaya.com/wp-content/uploads/2021/02/beauty-of-ladakh.jpeg",
+    description: "Embark on an unforgettable safari adventure with luxury tent accommodations.",
+    price: "2000",
+    orginalPrice: "2500",
+    roomRating: 4.9,
+    day: 10,
+    night: 9,
+    foodTime: 5,
+    city: "Nairobi",
+    state: "Kenya",
+    createdAt: "2024-03-09T14:10:00Z",
+    updatedAt: "2024-03-09T14:10:00Z"
+  },
+  {
+    heading: "Historic European Castle Stay",
+    image: "https://i.natgeofe.com/n/dc3aab5b-3376-4467-91ea-ac0f556802fa/ladakh-india02_4x3.jpg?w=1440&h=1080",
+    description: "Live like royalty in a historic European castle with modern amenities.",
+    price: "1800",
+    orginalPrice: "2200",
+    roomRating: 4.6,
+    day: 6,
+    night: 5,
+    foodTime: 4,
+    city: "Edinburgh",
+    state: "Scotland",
+    createdAt: "2024-03-08T16:50:00Z",
+    updatedAt: "2024-03-08T16:50:00Z"
+  },
+  {
+    heading: "Coastal Cliffside Retreat",
+    image: "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+    description: "Relax in a luxurious coastal retreat perched on the edge of a cliff.",
+    price: "1400",
+    orginalPrice: "1800",
+    roomRating: 4.7,
+    day: 5,
+    night: 4,
+    foodTime: 3,
+    city: "Big Sur",
+    state: "California",
+    createdAt: "2024-03-07T10:15:00Z",
+    updatedAt: "2024-03-07T10:15:00Z"
+  },
+  {
+    heading: "Alpine Ski Resort Getaway",
+    image: "https://captureatrip.s3.amazonaws.com/uploads/blog/images/cover/Beyond_the_natural_beauty_of_Ladakh.jpg",
+    description: "Hit the slopes and unwind at a luxurious alpine ski resort.",
+    price: "1600",
+    orginalPrice: "2000",
+    roomRating: 4.5,
+    day: 4,
+    night: 3,
+    foodTime: 3,
+    city: "Vail",
+    state: "Colorado",
+    createdAt: "2024-03-06T12:30:00Z",
+    updatedAt: "2024-03-06T12:30:00Z"
+  },
+  {
+    heading: "Desert Glamping Experience",
+    image: "https://c8.alamy.com/comp/E88XP1/namgyal-tsemo-gompa-leh-ladakh-india-asia-E88XP1.jpg",
+    description: "Experience the beauty of the desert in luxury glamping tents under the stars.",
+    price: "1200",
+    orginalPrice: "1500",
+    roomRating: 4.4,
+    day: 3,
+    night: 2,
+    foodTime: 2,
+    city: "Sahara",
+    state: "Morocco",
+    createdAt: "2024-03-05T09:00:00Z",
+    updatedAt: "2024-03-05T09:00:00Z"
+  }
+];
+
+
+
+interface packageProps {
+  heading:string,
+  image:string,
+  description:string,
+  price: string,
+  orginalPrice : string,
+  roomRating : number,
+  day : number,
+  night : number,
+  foodTime : number,
+  city: string,
+  state: string,
+  createdAt: string;
+  updatedAt: string;
+}
 
 function PackagesComponent() {
-    // this state for store Package Details
-    const [packagesData, setPackagesData] = useState<packageInterface[]>([]);
+  // this state for store popup status.
+  const [isOpenPopup, setIsOpenPopup] = useState<boolean>(false);
+
+  // this state for store Package Details
+  const [packagesData, setPackagesData] = useState(packageMockdata);
+
+  // this state for store selected package data
+  const [selectdPackage, setSelectedPackage] = useState<packageProps | null>(null);
+
+  // this fuction using for show values is the popup
+  const handleShowDetails = (data:any) => {
+    setIsOpenPopup(true);
+    setSelectedPackage(data);
+  }
 
   // this fcunction using for fetch package Details
-  const fetPackgeDetails = async () => {
-    let res = await axios.get(`${base_url}/package`);
-    console.log("res", res.data.packagesDetails);
-    let responseData = res.data.packagesDetails;
-    setPackagesData(responseData);
-  };
+  // const fetPackgeDetails = async () => {
+  //   let res = await axios.get(`{base_url}/package`);
+  //   console.log("res", res.data.packagesDetails);
+  //   let responseData = res.data.packagesDetails;
+  //   setPackagesData(responseData);
+  // };
 
-  useEffect(()=>{
-    fetPackgeDetails();
-  },[])
+  useEffect(() => {
+    // fetPackgeDetails();
+    console.log(packageMockdata);
+    setPackagesData(packageMockdata);
+    
+  }, []);
+
+  const navigage = useNavigate();
 
   return (
-    <div className='PackagesComponent'>
-        <div className='heading-container my-2'>
+    <div className="PackagesComponent position-relative">
+
+{isOpenPopup && (
+  <div className="position-fixed z text-center top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
+    <div className="container p-3 border border-2 rounded bg-light">
+      <div>
+        <div className="text-end">
+          <CloseButton
+            onClick={() => {
+              setIsOpenPopup(false);
+            }}
+          />
+        </div>
+        <div className="d-flex flex-wrap justify-content-center align-items-center">
+          <img className="rounded w-50" src={selectdPackage?.image} alt="" />
+          <div className="m-2 w-100">
+            <div className="text-center my-3 fs-3 fw-bold">
+            {selectdPackage?.heading}
+            </div>
+              <p className="">
+                {selectdPackage?.description}
+              </p>
+            <div className='badge-container my-3 d-flex justify-content-center flex-wrap'>
+              <div className='badge'><IoBedOutline className='me-1 fs-6'/> <div>{selectdPackage?.roomRating} Star</div></div>
+              <div className='badge'><FiSun className='me-1 fs-6' /> <div>{selectdPackage?.day} Day</div></div>
+              <div className='badge'><IoMoonOutline className='me-1 fs-6' /> <div>{selectdPackage?.night} Night</div></div>
+              <div className='badge'><ImSpoonKnife className='me-1 fs-6' /> <div>{selectdPackage?.foodTime} Time</div></div>
+              <div className='badge'><FaWifi className='me-1 fs-6' /> <div>Free</div></div>
+            </div>
+            <div className="d-flex align-items-center justify-content-center">
+            <div className='mt-2 d-flex align-items-center'><BsFillPinMapFill  className='me-2'/> <div>{selectdPackage?.city}, {selectdPackage?.state}</div></div>
+
+            </div>
+          <div className='mt-3'><button className='button' onClick={()=>{navigage('/contact')}}>Contact Us</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
+
+      <div className="heading-container my-2">
         <div>
-        <div className='heading'>New Packages</div>
-        <div >Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div className="heading">New Packages</div>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
         </div>
-        <div className='d-flex align-itmes-center my-2'>
-        <div className='icon-left me-3'><IoIosArrowRoundBack/></div>
-        <div className='icon-right'><IoIosArrowRoundForward/></div>
+        <div className="d-flex align-itmes-center my-2">
+          <div className="icon-left me-3">
+            <IoIosArrowRoundBack />
+          </div>
+          <div className="icon-right">
+            <IoIosArrowRoundForward />
+          </div>
         </div>
-        </div>
-        <div className='container'>
-        <div className='packages'>
-          {packagesData.map((data:any)=>{
-            return(
-              <Package heading={data.heading} image={data.image} description={data.description} price={data.price} orginalPrice={''} roomRating={0} day={0} night={0} foodTime={0} city={''} state={''} createdAt={''} updatedAt={''} /> 
-            )
+      </div>
+      <div className="container">
+        <div className="packages">
+          {packagesData.map((data: any, index: number) => {
+            return (
+              <div
+                key={index}
+                onClick={() => {
+                  handleShowDetails(data);
+                }}
+              >
+                <Package
+                  heading={data.heading}
+                  image={data.image}
+                  description={data.description}
+                  price={data.price}
+                  orginalPrice={data.orginalPrice}
+                  roomRating={data.roomRating}
+                  day={data.day}
+                  night={data.night}
+                  foodTime={data.foodTime}
+                  city={data.city}
+                  state={data.state}
+                  createdAt={data.createAt}
+                  updatedAt={data.updatedAt}
+                />
+              </div>
+            );
           })}
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default PackagesComponent;

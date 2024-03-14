@@ -1,15 +1,18 @@
 import React from "react";
 import "./GalleryHeading.scss";
-import image1 from "../../../assets/package images/LADAKH-1.jpeg";
 
-export default function GalleryHeading() {
+interface galery {
+  heading: string,
+  image: string
+}
+const  GalleryHeading: React.FC<galery> = ({heading , image}) => {
   return (
     <div className="GalleryHeading my-2">
       <div className="image-container">
-        <img src={image1} alt="" className="image" />
+        <img src={image} alt="" className="image" />
         <div className="image-text-conatainer">
-          <div className="heading">Singapore</div>
-          <div className="sub-heading">15,467 Properties</div>
+          <div className="heading">{heading}</div>
+          <div className="sub-heading">1556 Properties</div>
         </div>
         <div className="hover-items">
           <div className="hover-items-text"><div>30+</div></div>
@@ -18,3 +21,5 @@ export default function GalleryHeading() {
     </div>
   );
 }
+
+export default GalleryHeading;

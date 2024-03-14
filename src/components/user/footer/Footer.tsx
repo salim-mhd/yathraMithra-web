@@ -17,7 +17,7 @@ export default function Footer() {
         <div>
           <img src={logo} height={70} alt="" />
         </div>
-        <div className="my-3">sample sample sample sample</div>
+        <div className="my-3">where adventure meets discovery in every mile.</div>
         <div className="full-icons-container">
           <div className="icon-container">
             <FaFacebookF className="icon" />
@@ -48,11 +48,11 @@ export default function Footer() {
         </div>
         <div className="d-flex align-items-center justify-content-start">
           <IoMailOpenOutline className="fs-4 me-3 my-3" />
-          <div>test@gmail.com</div>
+          <div>yathraMithra@gmail.com</div>
         </div>
         <div className="d-flex align-items-center justify-content-start">
           <FaPhoneAlt className="fs-4 me-3" />
-          <div>+91 9234567891</div>
+          <div>+91 8848392395</div>
         </div>
       </div>
     </div>

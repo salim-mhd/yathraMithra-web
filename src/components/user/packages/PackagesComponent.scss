@@ -1,4 +1,5 @@
-$background-color: #79006e;
+$background-color: hsl(305, 100%, 24%);
+$background-color-hover: #53004c;
 
 .PackagesComponent{
     margin: 70px;
@@ -59,4 +60,43 @@ $background-color: #79006e;
                 display: none;
               }
         }
+
+        .badge-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+    
+            .badge {
+                display: flex;
+                align-items: center;
+                background-color: rgb(230, 230, 230);
+                color: black;
+                margin: 3px;
+                font-weight: 500;
+            }
+        }
+
+        .text{
+            font-size: larger;
+            text-align: center;
+            text-wrap: wrap;
+        }
+
+        .z{
+            z-index: 9999999999;
+        }
+
+        .button{
+            background-color: $background-color;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 25px 10px 25px;
+            border: none;
+    
+            &:hover{
+                background-color: $background-color-hover;
+            }
+        }
+
       }
