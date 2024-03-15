@@ -9,9 +9,13 @@ import {
 } from "react-icons/fa";
 import { FaMapLocationDot, FaXTwitter } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Footer() {
-  return (
+const navigate = useNavigate();
+
+return (
     <div className="Footer p-5">
       <div className="text-center">
         <div>
@@ -37,10 +41,12 @@ export default function Footer() {
       </div>
       <div>
         <div className="fw-bold fs-4 my-4">Information</div>
-        <div className="mb-2">Home</div>
-        <div className="my-2">Packages</div>
-        <div className="my-2">Blog</div>
-        <div className="my-2">About us</div>
+        <div className="mb-2 options" role="button" onClick={()=>{navigate('/')}}>Home</div>
+        <div className="my-2 options" role="button" onClick={()=>{navigate('/gallery')}}>Gallery</div>
+        <div className="my-2 options" role="button" onClick={()=>{navigate('/packages')}}>Packages</div>
+        <div className="my-2 options" role="button" onClick={()=>{navigate('/blog')}}>Blog</div>
+        <div className="my-2 options" role="button" onClick={()=>{navigate('/about')}}>About us</div>
+        <div className="my-2 options" role="button" onClick={()=>{navigate('/contact')}}>Contact us</div>
       </div>
       <div>
         <div className="fw-bold fs-4 my-4">Contact</div>

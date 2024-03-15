@@ -1,5 +1,6 @@
 import React from 'react'
 import './Button.scss'
+import { useNavigate } from 'react-router-dom';
 
 
 // Define interface for props
@@ -10,9 +11,11 @@ interface ButtonProps {
 
 // Functional component with TypeScript
 const Button: React.FC<ButtonProps> = ({ text , icon }) => {
+  const navigate = useNavigate();
+
   return (
     <div className='d-flex align-items-center justify-content-center'>
-      <div className='Button'><div>{text}</div> {icon ? <div className='ms-2 fs-5'>{icon}</div> : <></>}</div>
+      <div onClick={()=>{navigate('/contact')}} className='Button'><div>{text}</div> {icon ? <div className='ms-2 fs-5'>{icon}</div> : <></>}</div>
     </div>
   );
 }

@@ -40,4 +40,11 @@ $background-color-hover: #a9aeb5;
         }
 
     }
+
+    .options{
+        color: white;
+        &:hover{
+            color: black;
+        }
+    }
 }
