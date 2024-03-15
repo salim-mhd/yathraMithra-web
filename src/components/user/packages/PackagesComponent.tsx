@@ -4,7 +4,7 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Package from "../package/Package";
 // import axios from "axios";
 // import { base_url } from "../../../constants/staticData";
-import { CloseButton } from "react-bootstrap";
+// import { CloseButton } from "react-bootstrap";
 
 // import { IoBedOutline, IoMoonOutline } from "react-icons/io5";
 // import { FiSun } from "react-icons/fi";
@@ -12,8 +12,177 @@ import { CloseButton } from "react-bootstrap";
 // import { FaWifi } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 // import { BsFillPinMapFill } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 
 const packageMockdata = [
+  {
+    heading: "LEH LADAKH, NUBRA, PANGONG",
+    subPackage: [
+      {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 2,
+        heading: "Leh Local Sightseeing.",
+        description:
+          "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the hotel in Leh, Dinner and overnight stay at the Camp/ Hotel in Nubra, Lunch will be basic veg-food on the way to Nubra)",
+      },
+      {
+        day: 4,
+        heading: "Nubra Vally to Pangong lake (145 km) Starting at 10.30 AM",
+        description:
+          "Nubra Camp/ Hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp/ Hotel at Pangong",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra Camp/ Hotel, Dinner and overnight stay at the Camp/ Hotel in Pangong, Lunch will be basic veg-food on the way to Pangong)",
+      },
+      {
+        day: 5,
+        heading: "Pangong to Leh (180 km) Starting at 9.30 AM",
+        description:
+          "Camp/ Hotel at Pangong - Spangmik Glacier - Snow Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Pangong Camp/ Hotel, Dinner and overnight stay at the hotel in Leh, Lunch will be basic veg-food on the way to Leh)",
+      },
+      {
+        day: 6,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
+    ],
+    transportation:
+      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
+    accommodation:
+      "Leh Ladakh: 3 Nights at a 3-star hotel., Nubra Valley: 1 Night at a 3-star categorised hotel, but less impressive compared to the hotel in Leh due to location limitations., Pangong: 1 Night at a 3-star hotel, considered the best in the area but not as impressive compared to the hotel in Leh due to location constraints.",
+    permits: "Inner Line permits/ Wild Life Fees Entry fees (Palace, Shanthi Stoopa, Diskit Monastery, Hall of Fame)",
+    MedicalSupport:
+      "Oxygen cylinder, 1 per vehicle, Medical support if needed, Necessary medical/ vitamin tablets",
+    costExcludes:
+      "Flight charge, Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone etc., Any other tours not mentioned in the program.",
+    OtherDetails:
+      "Hotel: 3-star hotels, Vehicle: Traveller for tour, Eco wan for Airport pick up and Drop, Expected temperature: Between -2 degrees to 15 degrees (April, May), Necessary dress: Winter Jacket, Shoes, Thermal wear, Shades, lip balm, cold cream, Snacks will be provided on request if needed.",
+    TermsAndConditions:
+      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
+    day: 6,
+    night: 5,
+    food: "6 Breakfast, 5 Dinner, 5 Lunch, 2 water bottles per day, NB: Food in Nubra and Pangong will be vegetarian cuisine",
+    createdAt: "2024-03-07T10:15:00Z",
+    updatedAt: "2024-03-07T10:15:00Z",
+  },
+  {
+    heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG",
+    subPackage: [
+      {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 2,
+        heading: "Leh Local Sightseeing.",
+        description:
+          "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the camp/ hotel in Leh, Dinner and overnight stay at the camp/ hotel in Nubra)",
+      },
+      {
+        day: 4,
+        heading: "Nubra Valley (165 Kms) to Turtuk Starting at 8.30 AM",
+        description:
+          "Nubra Camp - Turtuk village - Nubra Camp",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp/ hotel in Nubra)",
+      },
+      {
+        day: 5,
+        heading: "Nubra Vally to Pangong lake (145 km) Starting at 10.30 AM",
+        description:
+          "Nubra camp/ hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - camp/ hotel at Pangong",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra camp/ hotel, Dinner and overnight stay at the camp/ hotel in Pangong)",
+      },
+      {
+        day: 6,
+        heading: "Pangong to Leh (180 km) Starting at 9.30 AM",
+        description:
+          "Camp/ hotel at Pangong - Spangmik Glacier -cSnow‐Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh market visit - Leh Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Pangong camp/ hotel, Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 7,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
+    ],
+    transportation:
+      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
+    accommodation:
+      "Leh Ladakh 03 Nights, Nubra Valley 02 Night, Pangong 01 Night",
+    permits: "Inner Line permits/ Wild Life Fees",
+    MedicalSupport:
+      "Medical support if needed, Necessary medical/ vitamin tablets",
+    costExcludes:
+      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees., Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
+    OtherDetails:
+      "Hotel: 4/3/2-star hotels and 3/2-star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van/ Bike, Guide: If needed, Expected temperature: Between -5 degrees to 10 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed due to the lack of availability of cooked food. People can have food from local shops at their own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
+    TermsAndConditions:
+      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
+    day: 7,
+    night: 6,
+    food: "7 Breakfast, 6 Dinner, 1 Lunch, 2 water bottles per day",
+    createdAt: "2024-03-07T10:15:00Z",
+    updatedAt: "2024-03-07T10:15:00Z",
+  },
   {
     heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG, UMLING LA, HANLE, TSO MORIRI",
     subPackage: [
@@ -257,175 +426,7 @@ const packageMockdata = [
     food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
     createdAt: "2024-03-07T10:15:00Z",
     updatedAt: "2024-03-07T10:15:00Z",
-  },
-  {
-    heading: "LEH LADAKH, NUBRA, PANGONG",
-    subPackage: [
-      {
-        day: 1,
-        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
-        description:
-          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
-        image:
-          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
-        others:
-          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
-      },
-      {
-        day: 2,
-        heading: "Leh Local Sightseeing.",
-        description:
-          "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
-      },
-      {
-        day: 3,
-        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
-        description:
-          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at the hotel in Leh, Dinner and overnight stay at the Camp/ Hotel in Nubra, Lunch will be basic veg-food on the way to Nubra)",
-      },
-      {
-        day: 4,
-        heading: "Nubra Vally to Pangong lake (145 km) Starting at 10.30 AM",
-        description:
-          "Nubra Camp/ Hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp/ Hotel at Pangong",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at Nubra Camp/ Hotel, Dinner and overnight stay at the Camp/ Hotel in Pangong, Lunch will be basic veg-food on the way to Pangong)",
-      },
-      {
-        day: 5,
-        heading: "Pangong to Leh (180 km) Starting at 9.30 AM",
-        description:
-          "Camp/ Hotel at Pangong - Spangmik Glacier - Snow Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh Hotel",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at Pangong Camp/ Hotel, Dinner and overnight stay at the hotel in Leh, Lunch will be basic veg-food on the way to Leh)",
-      },
-      {
-        day: 6,
-        heading: "Airport Drop (5 Km 10 Mints)",
-        description:
-          "After breakfast, Airport drop",
-      },
-    ],
-    transportation:
-      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
-    accommodation:
-      "Leh Ladakh: 3 Nights at a 3-star hotel., Nubra Valley: 1 Night at a 3-star categorised hotel, but less impressive compared to the hotel in Leh due to location limitations., Pangong: 1 Night at a 3-star hotel, considered the best in the area but not as impressive compared to the hotel in Leh due to location constraints.",
-    permits: "Inner Line permits/ Wild Life Fees Entry fees (Palace, Shanthi Stoopa, Diskit Monastery, Hall of Fame)",
-    MedicalSupport:
-      "Oxygen cylinder, 1 per vehicle, Medical support if needed, Necessary medical/ vitamin tablets",
-    costExcludes:
-      "Flight charge, Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone etc., Any other tours not mentioned in the program.",
-    OtherDetails:
-      "Hotel: 3-star hotels, Vehicle: Traveller for tour, Eco wan for Airport pick up and Drop, Expected temperature: Between -2 degrees to 15 degrees (April, May), Necessary dress: Winter Jacket, Shoes, Thermal wear, Shades, lip balm, cold cream, Snacks will be provided on request if needed.",
-    TermsAndConditions:
-      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
-    day: 6,
-    night: 5,
-    food: "6 Breakfast, 5 Dinner, 5 Lunch, 2 water bottles per day, NB: Food in Nubra and Pangong will be vegetarian cuisine",
-    createdAt: "2024-03-07T10:15:00Z",
-    updatedAt: "2024-03-07T10:15:00Z",
-  },
-  {
-    heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG",
-    subPackage: [
-      {
-        day: 1,
-        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
-        description:
-          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
-        image:
-          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
-        others:
-          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
-      },
-      {
-        day: 2,
-        heading: "Leh Local Sightseeing.",
-        description:
-          "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
-      },
-      {
-        day: 3,
-        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
-        description:
-          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at the camp/ hotel in Leh, Dinner and overnight stay at the camp/ hotel in Nubra)",
-      },
-      {
-        day: 4,
-        heading: "Nubra Valley (165 Kms) to Turtuk Starting at 8.30 AM",
-        description:
-          "Nubra Camp - Turtuk village - Nubra Camp",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp/ hotel in Nubra)",
-      },
-      {
-        day: 5,
-        heading: "Nubra Vally to Pangong lake (145 km) Starting at 10.30 AM",
-        description:
-          "Nubra camp/ hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - camp/ hotel at Pangong",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at Nubra camp/ hotel, Dinner and overnight stay at the camp/ hotel in Pangong)",
-      },
-      {
-        day: 6,
-        heading: "Pangong to Leh (180 km) Starting at 9.30 AM",
-        description:
-          "Camp/ hotel at Pangong - Spangmik Glacier -cSnow‐Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh market visit - Leh Hotel",
-        image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-        others:
-          "(Breakfast at Pangong camp/ hotel, Dinner and overnight stay at the hotel in Leh)",
-      },
-      {
-        day: 7,
-        heading: "Airport Drop (5 Km 10 Mints)",
-        description:
-          "After breakfast, Airport drop",
-      },
-    ],
-    transportation:
-      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
-    accommodation:
-      "Leh Ladakh 03 Nights, Nubra Valley 02 Night, Pangong 01 Night",
-    permits: "Inner Line permits/ Wild Life Fees",
-    MedicalSupport:
-      "Medical support if needed, Necessary medical/ vitamin tablets",
-    costExcludes:
-      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees., Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
-    OtherDetails:
-      "Hotel: 4/3/2-star hotels and 3/2-star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van/ Bike, Guide: If needed, Expected temperature: Between -5 degrees to 10 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed due to the lack of availability of cooked food. People can have food from local shops at their own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
-    TermsAndConditions:
-      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
-    day: 7,
-    night: 6,
-    food: "7 Breakfast, 6 Dinner, 1 Lunch, 2 water bottles per day",
-    createdAt: "2024-03-07T10:15:00Z",
-    updatedAt: "2024-03-07T10:15:00Z",
-  },
+  }
 ];
 
 interface SubPackage {
@@ -495,18 +496,18 @@ function PackagesComponent() {
   return (
     <div className="PackagesComponent">
       {isOpenPopup && (
-        <div className="popup-container">
-          <div className="container p-3 border border-2 rounded bg-light overflow-auto popup-content">
-            <div>
-              <div className="text-end fs-3 fw-bolder">
-                <CloseButton
-                  onClick={() => {
+        <div className="main-popup-container">
+                  <div className="popup-container">
+                  <div className="button-container">
+                  <AiOutlineClose color="#53004c" size={40} onClick={() => {
                     setIsOpenPopup(false);
-                  }}
-                />
+                  }}/>
+                    <div className="close-button fs-1" >
+                    
+                    </div>
               </div>
-              <div className="">
-                <div className="text-center my-3">
+                        <div className="p-3 border border-2 rounded bg-light popup-content">
+                <div className="text-center my-5">
                   <div className="my-3 fs-3 fw-bold">
                     {selectdPackage?.heading}
                   </div>
@@ -617,8 +618,7 @@ function PackagesComponent() {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
+        </div>
         </div>
       )}
 

@@ -112,20 +112,41 @@ $background-color-hover: #53004c;
         
         }
 
-        .popup-container{
+        .main-popup-container{
             padding: 5px;
             position: fixed;
-            height: 85%;
+            height: 100vh;
             top: 0;
             left: 0;
             right: 0;
-            overflow: auto;
-            z-index: 999999999;
+            z-index: 999999998;
             border-radius: 20px;
-            margin: 7% 2%;
+            margin: 90px 20px;
+            // overflow: auto;
 
-            .popup-content{
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.30);
+            .popup-container{
+                overflow: auto;
+                height: 100%;
+    
+                .button-container{
+                    margin: 20px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 999999999;
+                    font-size: x-large;
+
+                    .btn-close{
+                        color: white !important;
+                    }
+                }
+    
+                .popup-content{
+                    height: 85%;
+                    overflow: auto;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.50);
+
+                }
             }
         }
 
