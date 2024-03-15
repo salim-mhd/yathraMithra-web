@@ -17,7 +17,9 @@ export default function Footer() {
         <div>
           <img src={logo} height={70} alt="" />
         </div>
-        <div className="my-3">where adventure meets discovery in every mile.</div>
+        <div className="my-3">
+          where adventure meets discovery in every mile.
+        </div>
         <div className="full-icons-container">
           <div className="icon-container">
             <FaFacebookF className="icon" />
@@ -42,9 +44,11 @@ export default function Footer() {
       </div>
       <div>
         <div className="fw-bold fs-4 my-4">Contact</div>
-        <div className="d-flex align-items-center justify-content-start">
+        <div className="d-flex align-items-start">
           <FaMapLocationDot className="fs-4 me-3" />
-          <div>Leh, Ladakh</div>
+          <div>          <div>Kerala House, </div>
+          <div>Skampari,</div>
+          <div>Ladakh</div></div>
         </div>
         <div className="d-flex align-items-center justify-content-start">
           <IoMailOpenOutline className="fs-4 me-3 my-3" />
