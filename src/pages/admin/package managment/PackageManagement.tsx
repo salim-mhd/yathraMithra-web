@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { base_url } from "../../../constants/staticData";
 import { packageInterface } from "../../../interface/Interface";
+import './PackageManagement.scss'
 
 export default function PackageManagment() {
   // this state for store popup status.
@@ -77,10 +78,6 @@ export default function PackageManagment() {
   };
 
   const handleSubmit = async (e: any) => {
-    console.log("handleSubmit");
-    
-    console.log("handleSubmit 1");
-
       const formData = {
         heading:heading,
         image: image,
@@ -211,7 +208,7 @@ export default function PackageManagment() {
   },[])
 
   return (
-    <div>
+    <div className="PackageManagement">
       {/* This is a component which is using for show navbar */}
       <AdminNavbar option={"package"} />
       <div>
@@ -228,15 +225,16 @@ export default function PackageManagment() {
           </button>
         </div>
         {isOpenPopup && (
-          <div className="d-flex align-items-center justify-content-center">
-            <div className="position-absolute z-3 mt-5 w-75 border border-2 rounded p-3 bg-light">
-              <div>
-                <div className="text-end">
+          <div className="add-popup">
+            <div className="position-absolute z-3 top-0 bottom-0 m-5 w-75 border border-2 rounded p-3 bg-light overflow-auto">
+            <div className="position-absolute z-3 top-0 end-0 m-4">
                   <CloseButton onClick={handlePopupClose} />
                 </div>
-                <form className="p-3 row">
-                  <div className="mb-3 col-md-6">
-                    <label htmlFor="name" className="form-label">
+                <form className="p-3">
+                  <div className="d-flex my-3 flex-wrap align-items-center justify-content-between">
+                  <div className="col-md-7 col-12">
+                    <div>
+                    <label htmlFor="name" className="form-label mt-2">
                       Heading
                     </label>
                     <input
@@ -248,15 +246,49 @@ export default function PackageManagment() {
                       }}
                       id="name"
                     />
+                    </div>
                   </div>
-                  <div className="col-md-6">
-                    <input
+                  <div className="col-md-5 col-12">
+                    <div className="row m-">
+                    <label htmlFor="duration" className="form-label mt-2">
+                      Heading
+                    </label>
+                    <div id="duration" className="d-flex">
+                    <div  className="col-6 col-md-3 m-1">
+                      <Form.Select aria-label="Default select example" onChange={(e)=>{setDay(parseInt(e.target.value))}}>
+                        <option>Day</option>
+                        <option value='1'>1</option>
+                        <option value="2" >2</option>
+                        <option value="3" >3</option>
+                        <option value="4" >4</option>
+                        <option value="5" >5</option>
+                      </Form.Select>
+
+                    </div>
+                    <div className="col-6 col-md-3 m-1">
+                      <Form.Select aria-label="Default select example" onChange={(e)=>{setNight(parseInt(e.target.value))}}>
+                        <option>Night</option>
+                        <option value='1' >1</option>
+                        <option value="2"  >2</option>
+                        <option value="3"  >3</option>
+                        <option value="4"  >4</option>
+                        <option value="5"  >5</option>
+                      </Form.Select>
+</div>
+                    </div>
+                    </div>
+                    {/* <input
                       type="file"
                       name="image"
                       id="imageInput"
                       accept="image/*"
                       onChange={handleImageUpload}
-                    />
+                    /> */}
+                  </div>
+                  </div>
+
+                  <div className="package-acivities">
+
                   </div>
                   <div className="form-floating mb-4">
                     <textarea
@@ -344,26 +376,7 @@ export default function PackageManagment() {
                         <option value="5" >5</option>
                       </Form.Select>
                     </div>
-                    <div className="mx-1">
-                      <Form.Select aria-label="Default select example" onChange={(e)=>{setDay(parseInt(e.target.value))}}>
-                        <option>Day</option>
-                        <option value='1'>1</option>
-                        <option value="2" >2</option>
-                        <option value="3" >3</option>
-                        <option value="4" >4</option>
-                        <option value="5" >5</option>
-                      </Form.Select>
-                    </div>
-                    <div className="mx-1">
-                      <Form.Select aria-label="Default select example" onChange={(e)=>{setNight(parseInt(e.target.value))}}>
-                        <option>Night</option>
-                        <option value='1' >1</option>
-                        <option value="2"  >2</option>
-                        <option value="3"  >3</option>
-                        <option value="4"  >4</option>
-                        <option value="5"  >5</option>
-                      </Form.Select>
-                    </div>
+
                     <div className="mx-1">
                       <Form.Select aria-label="Default select example" onChange={(e)=>{setFoodTime(parseInt(e.target.value))}}>
                         <option>Food Time</option>
@@ -385,7 +398,6 @@ export default function PackageManagment() {
                     </button>
                   </div>
                 </form>
-              </div>
             </div>
           </div>
         )}
@@ -552,7 +564,7 @@ export default function PackageManagment() {
           </div>
         </div>
         )}
-        <div className="px-5">
+        <div className="px-5 overflow-auto">
           <Table bordered className="text-center">
             <thead>
               <tr>

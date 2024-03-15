@@ -15,7 +15,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="text-center">
-          <u className="fs-1 underline">Send Massage</u>
+          <u className="fs-1 underline">Send Message</u>
           <div className="px-5">
             <div className="m-5">
               <input

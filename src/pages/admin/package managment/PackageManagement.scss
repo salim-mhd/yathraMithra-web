@@ -1,0 +1,14 @@
+.PackageManagement{
+
+    .add-popup{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .package-acivities{
+            border: 1px red solid;
+            margin: 10px 0;
+        }
+    }
+
+}

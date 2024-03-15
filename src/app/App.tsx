@@ -11,7 +11,7 @@ import Contact from "../pages/user/contact/Contact";
 import LoginPage from '../pages/admin/loginPage/LoginPage';
 import BlogManagment from '../pages/admin/blog managment/BlogManagment';
 import Dashbord from '../pages/admin/dashbord/Dashbord';
-import PackageManagment from '../pages/admin/package managment/PackageManagment';
+import PackageManagment from '../pages/admin/package managment/PackageManagement';
 
 // This is app funciton
 function App() {
