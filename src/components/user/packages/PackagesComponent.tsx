@@ -23,7 +23,7 @@ const packageMockdata = [
         description:
           "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
         others:
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
@@ -147,14 +147,74 @@ const packageMockdata = [
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
       {
-        day: 9,
-        heading: "Tso Moriri to Leh (220 km) Starting at 9.30 AM",
+        day: 2,
+        heading: "Leh Local Sightseeing.",
         description:
-          "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
+          "Leh hotel - Shanti Stupa – Leh Palace - Market visit - Stay at hotel in Leh",
         image:
           "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
         others:
-          "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
+          "(Breakfast, dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Drass - Leh",
+        description:
+          "Leh hotel - Lamayuru- Kargil - Drass - Leh hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast in Leh hotel & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 4,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride - Nubra Camp in Hunder",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Stok, Dinner and overnight stay at the camp in Hunder, Nubra)",
+      },
+      {
+        day: 5,
+        heading: "Nubra Valley (90+90 Kms) to Turtuk - Nubra Valley Starting at 8.30 AM",
+        description:
+          "Nubra Camp - Turtuk village - Nubra Camp",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp in Nubra)",
+      },
+      {
+        day: 6,
+        heading: "Nubra Vally to Pangong lake (175 km) Starting at 9.30 AM",
+        description:
+          "Nubra Camp - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp at Pangong,Tangse",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra Camp, Dinner and overnight stay at Hotel at Pangong, Tangse)",
+      },
+      {
+        day: 7,
+        heading: "Tangse, Pangong to Hanleh (180 km) Starting at 9.00 AM",
+        description:
+          "Hotel at Tanste, Pangong - Hanleh Homestay",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel at Pangong, Dinner and overnight stay at Hanleh Homestay)",
+      },
+      {
+        day: 8,
+        heading: "Hanle to Umling la to Tso Moriri (80km + 80km + 160km) Starting at 9.30 AM",
+        description:
+          "Homestay in Hanle - Umling la - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel in Hanle, Dinner and overnight stay at the homestay in Tso Moriri)",
       },
       {
         day: 9,
@@ -166,11 +226,23 @@ const packageMockdata = [
         others:
           "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
       },
+      {
+        day: 10,
+        heading: "Rest day, Leh market",
+         others:
+          "(Breakfast, dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 11,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
     ],
     transportation:
       "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
     accommodation:
-      "Leh Ladakh 04 Nights, Nubra Valley 02 Night, Pangong 01 Night, Hanle 01 Night, Tso Moriri 01 Night",
+      "Leh Ladakh 05 Nights, Nubra Valley 02 Night, Pangong 01 Night, Hanle 01 Night, Tso Moriri 01 Night",
     permits: "Inner Line permits/ Wild Life Fees",
     MedicalSupport:
       "Medical support if needed Necessary medical/ vitamin tablets",
@@ -180,8 +252,8 @@ const packageMockdata = [
       "Hotel: 3/2-star hotels and 3 -star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van, Guide: If needed, Expected temperature: Between - 10 degrees to 18 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed, due to the lack of availability of cooked food. People can have food from local shops at their, own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
     TermsAndConditions:
       "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double ,",
-    day: 10,
-    night: 9,
+    day: 11,
+    night: 10,
     food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
     createdAt: "2024-03-07T10:15:00Z",
     updatedAt: "2024-03-07T10:15:00Z",
