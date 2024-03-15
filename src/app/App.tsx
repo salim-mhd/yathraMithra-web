@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import './App.scss';
 import Home from '../pages/user/home/Home';
 import About from "../pages/user/about/About";
@@ -15,9 +15,29 @@ import PackageManagment from '../pages/admin/package managment/PackageManagment'
 
 // This is app funciton
 function App() {
+
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }, [pathname]);
+  
+    return null;
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

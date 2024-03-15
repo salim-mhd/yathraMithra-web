@@ -78,6 +78,7 @@ export default function Home() {
   //   setBlogData(responseData);
   // };
 
+  
   useEffect(()=>{
     // fetchBlogData();
     setBlogData(blogMockData);
