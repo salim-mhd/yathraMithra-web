@@ -12,154 +12,416 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const packageMockdata = [
   {
     heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG, UMLING LA, HANLE, TSO MORIRI",
-    image: "https://luxuryescapes.com/inspiration/wp-content/uploads/2023/07/AdobeStock_603464271-scaled.jpeg",
-    description: "Escape to a luxury beach resort with breathtaking ocean views.",
-    price: "1000",
-    orginalPrice: "1500",
-    roomRating: 4.5,
-    day: 5,
-    night: 4,
-    foodTime: 3,
-    city: "Miami",
-    state: "Florida",
-    createdAt: "2024-03-14T12:00:00Z",
-    updatedAt: "2024-03-14T12:00:00Z"
-  },
-  {
-    heading: "Mountain Cabin Retreat",
-    image: "https://i.pinimg.com/736x/6d/88/d3/6d88d303fa719726b213b4bc35d63395.jpg",
-    description: "Cozy cabin nestled in the mountains, perfect for a serene getaway.",
-    price: "800",
-    orginalPrice: "1000",
-    roomRating: 4.0,
-    day: 3,
-    night: 2,
-    foodTime: 2,
-    city: "Asheville",
-    state: "North Carolina",
-    createdAt: "2024-03-13T09:30:00Z",
-    updatedAt: "2024-03-13T09:30:00Z"
-  },
-  {
-    heading: "Cityscape Hotel Experience",
-    image: "https://media-cdn.tripadvisor.com/media/photo-s/0d/79/45/db/pangong-tso.jpg",
-    description: "Enjoy the hustle and bustle of the city with a stay at a luxurious downtown hotel.",
-    price: "1200",
-    orginalPrice: "1400",
-    roomRating: 4.7,
-    day: 4,
-    night: 3,
-    foodTime: 3,
-    city: "New York City",
-    state: "New York",
-    createdAt: "2024-03-12T15:45:00Z",
-    updatedAt: "2024-03-12T15:45:00Z"
-  },
-  {
-    heading: "Rustic Countryside Retreat",
-    image: "https://www.travelholicq.com/wp-content/uploads/2020/11/Places-To-Visit-In-Ladakh-scaled.jpg",
-    description: "Experience the charm of the countryside in a cozy rustic cabin.",
-    price: "600",
-    orginalPrice: "800",
-    roomRating: 4.2,
-    day: 4,
-    night: 3,
-    foodTime: 2,
-    city: "Sedona",
-    state: "Arizona",
-    createdAt: "2024-03-11T18:20:00Z",
-    updatedAt: "2024-03-11T18:20:00Z"
-  },
-  {
-    heading: "Tropical Island Paradise",
-    image: "https://www.gofero.in//admin/webroot/img/uploads/holiday-package-gallery/1628326168_900312-vamshi-vangapally-fH-BSvYeX5g-unsplash.jpg",
-    description: "Escape to a secluded tropical island for the ultimate relaxation experience.",
-    price: "1500",
-    orginalPrice: "2000",
-    roomRating: 4.8,
-    day: 7,
-    night: 6,
-    foodTime: 4,
-    city: "Maui",
-    state: "Hawaii",
-    createdAt: "2024-03-10T11:00:00Z",
-    updatedAt: "2024-03-10T11:00:00Z"
-  },
-  {
-    heading: "Safari Adventure Camp",
-    image: "https://alpineclubofhimalaya.com/wp-content/uploads/2021/02/beauty-of-ladakh.jpeg",
-    description: "Embark on an unforgettable safari adventure with luxury tent accommodations.",
-    price: "2000",
-    orginalPrice: "2500",
-    roomRating: 4.9,
+    subPackage: [
+      {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 2,
+        heading: "Leh Local Sightseeing.",
+        description:
+          "Leh hotel - Shanti Stupa – Leh Palace - Market visit - Stay at hotel in Leh",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast, dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Drass - Leh",
+        description:
+          "Leh hotel - Lamayuru- Kargil - Drass - Leh hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast in Leh hotel & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 4,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride - Nubra Camp in Hunder",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Stok, Dinner and overnight stay at the camp in Hunder, Nubra)",
+      },
+      {
+        day: 5,
+        heading: "Nubra Valley (90+90 Kms) to Turtuk - Nubra Valley Starting at 8.30 AM",
+        description:
+          "Nubra Camp - Turtuk village - Nubra Camp",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp in Nubra)",
+      },
+      {
+        day: 6,
+        heading: "Nubra Vally to Pangong lake (175 km) Starting at 9.30 AM",
+        description:
+          "Nubra Camp - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp at Pangong, Tangse",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra Camp, Dinner and overnight stay at Hotel at Pangong, Tangse)",
+      },
+      {
+        day: 7,
+        heading: "Tangse, Pangong to Hanleh (180 km) Starting at 9.00 AM",
+        description:
+          "Hotel at Tanste, Pangong - Hanleh Homestay",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel at Pangong, Dinner and overnight stay at Hanleh Homestay)",
+      },
+      {
+        day: 8,
+        heading: "Hanle to Umling la to Tso Moriri (80km + 80km + 160km) Starting at 9.30 AM",
+        description:
+          "Homestay in Hanle - Umling la - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel in Hanle, Dinner and overnight stay at the homestay in Tso Moriri)",
+      },
+      {
+        day: 9,
+        heading: "Tso Moriri to Leh (220 km) Starting at 9.30 AM",
+        description:
+          "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 10,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
+    ],
+    transportation:
+      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
+    accommodation:
+      "Leh Ladakh 04 Nights, Nubra Valley 02 Night, Pangong 01 Night, Hanle 01 Night, Tso Moriri 01 Night",
+    permits: "Inner Line permits/ Wild Life Fees",
+    MedicalSupport:
+      "Medical support if needed, Necessary medical/ vitamin tablets",
+    costExcludes:
+      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees., Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
+    OtherDetails:
+      "Hotel: 3/2-star hotels and 3 -star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van, Guide: If needed, Expected temperature: Between - 10 degrees to 18 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed, due to the lack of availability of cooked food. People can have food from local shops at their, own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
+    TermsAndConditions:
+      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
     day: 10,
     night: 9,
-    foodTime: 5,
-    city: "Nairobi",
-    state: "Kenya",
-    createdAt: "2024-03-09T14:10:00Z",
-    updatedAt: "2024-03-09T14:10:00Z"
+    food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
+    createdAt: "2024-03-07T10:15:00Z",
+    updatedAt: "2024-03-07T10:15:00Z",
   },
   {
-    heading: "Historic European Castle Stay",
-    image: "https://i.natgeofe.com/n/dc3aab5b-3376-4467-91ea-ac0f556802fa/ladakh-india02_4x3.jpg?w=1440&h=1080",
-    description: "Live like royalty in a historic European castle with modern amenities.",
-    price: "1800",
-    orginalPrice: "2200",
-    roomRating: 4.6,
+    heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG, UMLING LA, HANLE, TSO MORIRI",
+    subPackage: [
+      {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 2,
+        heading: "Leh Local Sightseeing.",
+        description:
+          "Leh hotel - Shanti Stupa – Leh Palace - Market visit - Stay at hotel in Leh",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast, dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Drass - Leh",
+        description:
+          "Leh hotel - Lamayuru- Kargil - Drass - Leh hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast in Leh hotel & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 4,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride - Nubra Camp in Hunder",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Stok, Dinner and overnight stay at the camp in Hunder, Nubra)",
+      },
+      {
+        day: 5,
+        heading: "Nubra Valley (90+90 Kms) to Turtuk - Nubra Valley Starting at 8.30 AM",
+        description:
+          "Nubra Camp - Turtuk village - Nubra Camp",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp in Nubra)",
+      },
+      {
+        day: 6,
+        heading: "Nubra Vally to Pangong lake (175 km) Starting at 9.30 AM",
+        description:
+          "Nubra Camp - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp at Pangong,Tangse",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra Camp, Dinner and overnight stay at Hotel at Pangong, Tangse)",
+      },
+      {
+        day: 7,
+        heading: "Tangse, Pangong to Hanleh (180 km) Starting at 9.00 AM",
+        description:
+          "Hotel at Tanste, Pangong - Hanleh Homestay",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel at Pangong, Dinner and overnight stay at Hanleh Homestay)",
+      },
+      {
+        day: 8,
+        heading: "Hanle to Umling la to Tso Moriri (80km + 80km + 160km) Starting at 9.30 AM",
+        description:
+          "Homestay in Hanle - Umling la - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Hotel in Hanle, Dinner and overnight stay at the homestay in Tso Moriri)",
+      },
+      {
+        day: 9,
+        heading: "Tso Moriri to Leh (220 km) Starting at 9.30 AM",
+        description:
+          "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 10,
+        heading: "Rest day, Leh market",
+         others:
+          "(Breakfast, dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 11,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
+    ],
+    transportation:
+      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
+    accommodation:
+      "Leh Ladakh 05 Nights, Nubra Valley 02 Night, Pangong 01 Night, Hanle 01 Night, Tso Moriri 01 Night",
+    permits: "Inner Line permits/ Wild Life Fees",
+    MedicalSupport:
+      "Medical support if needed Necessary medical/ vitamin tablets",
+    costExcludes:
+      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees.,Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
+    OtherDetails:
+      "Hotel: 3/2-star hotels and 3 -star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van, Guide: If needed, Expected temperature: Between - 10 degrees to 18 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed, due to the lack of availability of cooked food. People can have food from local shops at their, own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
+    TermsAndConditions:
+      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
+    day: 11,
+    night: 10,
+    food: "11 Breakfast, 10 Dinner, 1 Lunch, 2 water bottles per day",
+    createdAt: "2024-03-07T10:15:00Z",
+    updatedAt: "2024-03-07T10:15:00Z",
+  },
+  {
+    heading: "LEH LADAKH, NUBRA, PANGONG",
+    subPackage: [
+      {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 2,
+        heading: "Leh Local Sightseeing.",
+        description:
+          "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the hotel in Leh, Dinner and overnight stay at the Camp/ Hotel in Nubra, Lunch will be basic veg-food on the way to Nubra)",
+      },
+      {
+        day: 4,
+        heading: "Nubra Vally to Pangong lake (145 km) Starting at 10.30 AM",
+        description:
+          "Nubra Camp/ Hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp/ Hotel at Pangong",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra Camp/ Hotel, Dinner and overnight stay at the Camp/ Hotel in Pangong, Lunch will be basic veg-food on the way to Pangong)",
+      },
+      {
+        day: 5,
+        heading: "Pangong to Leh (180 km) Starting at 9.30 AM",
+        description:
+          "Camp/ Hotel at Pangong - Spangmik Glacier - Snow Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Pangong Camp/ Hotel, Dinner and overnight stay at the hotel in Leh, Lunch will be basic veg-food on the way to Leh)",
+      },
+      {
+        day: 6,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
+    ],
+    transportation:
+      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
+    accommodation:
+      "Leh Ladakh: 3 Nights at a 3-star hotel., Nubra Valley: 1 Night at a 3-star categorised hotel, but less impressive compared to the hotel in Leh due to location limitations., Pangong: 1 Night at a 3-star hotel, considered the best in the area but not as impressive compared to the hotel in Leh due to location constraints.",
+    permits: "Inner Line permits/ Wild Life Fees Entry fees (Palace, Shanthi Stoopa, Diskit Monastery, Hall of Fame)",
+    MedicalSupport:
+      "Oxygen cylinder, 1 per vehicle, Medical support if needed, Necessary medical/ vitamin tablets",
+    costExcludes:
+      "Flight charge, Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone etc., Any other tours not mentioned in the program.",
+    OtherDetails:
+      "Hotel: 3-star hotels, Vehicle: Traveller for tour, Eco wan for Airport pick up and Drop, Expected temperature: Between -2 degrees to 15 degrees (April, May), Necessary dress: Winter Jacket, Shoes, Thermal wear, Shades, lip balm, cold cream, Snacks will be provided on request if needed.",
+    TermsAndConditions:
+      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
     day: 6,
     night: 5,
-    foodTime: 4,
-    city: "Edinburgh",
-    state: "Scotland",
-    createdAt: "2024-03-08T16:50:00Z",
-    updatedAt: "2024-03-08T16:50:00Z"
-  },
-  {
-    heading: "Coastal Cliffside Retreat",
-    image: "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
-    description: "Relax in a luxurious coastal retreat perched on the edge of a cliff.",
-    price: "1400",
-    orginalPrice: "1800",
-    roomRating: 4.7,
-    day: 5,
-    night: 4,
-    foodTime: 3,
-    city: "Big Sur",
-    state: "California",
+    food: "6 Breakfast, 5 Dinner, 5 Lunch, 2 water bottles per day, NB: Food in Nubra and Pangong will be vegetarian cuisine",
     createdAt: "2024-03-07T10:15:00Z",
-    updatedAt: "2024-03-07T10:15:00Z"
+    updatedAt: "2024-03-07T10:15:00Z",
   },
   {
-    heading: "Alpine Ski Resort Getaway",
-    image: "https://captureatrip.s3.amazonaws.com/uploads/blog/images/cover/Beyond_the_natural_beauty_of_Ladakh.jpg",
-    description: "Hit the slopes and unwind at a luxurious alpine ski resort.",
-    price: "1600",
-    orginalPrice: "2000",
-    roomRating: 4.5,
-    day: 4,
-    night: 3,
-    foodTime: 3,
-    city: "Vail",
-    state: "Colorado",
-    createdAt: "2024-03-06T12:30:00Z",
-    updatedAt: "2024-03-06T12:30:00Z"
+    heading: "LEH LADAKH, NUBRA, TURTUK, PANGONG",
+    subPackage: [
+      {
+        day: 1,
+        heading: "Leh Airport - Rest In Hotel (5 Km 10 Mints)",
+        description:
+          "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
+        image:
+          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+        others:
+          "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 2,
+        heading: "Leh Local Sightseeing.",
+        description:
+          "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 3,
+        heading: "Leh - Nubra Valley (125 Kms) Via Kartungla pass Starting at 8.30 AM",
+        description:
+          "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the camp/ hotel in Leh, Dinner and overnight stay at the camp/ hotel in Nubra)",
+      },
+      {
+        day: 4,
+        heading: "Nubra Valley (165 Kms) to Turtuk Starting at 8.30 AM",
+        description:
+          "Nubra Camp - Turtuk village - Nubra Camp",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp/ hotel in Nubra)",
+      },
+      {
+        day: 5,
+        heading: "Nubra Vally to Pangong lake (145 km) Starting at 10.30 AM",
+        description:
+          "Nubra camp/ hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - camp/ hotel at Pangong",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Nubra camp/ hotel, Dinner and overnight stay at the camp/ hotel in Pangong)",
+      },
+      {
+        day: 6,
+        heading: "Pangong to Leh (180 km) Starting at 9.30 AM",
+        description:
+          "Camp/ hotel at Pangong - Spangmik Glacier -cSnow‐Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh market visit - Leh Hotel",
+        image:
+          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+        others:
+          "(Breakfast at Pangong camp/ hotel, Dinner and overnight stay at the hotel in Leh)",
+      },
+      {
+        day: 7,
+        heading: "Airport Drop (5 Km 10 Mints)",
+        description:
+          "After breakfast, Airport drop",
+      },
+    ],
+    transportation:
+      "Meeting and Assistance on Arrival and Departure Transport Services as per the itinerary",
+    accommodation:
+      "Leh Ladakh 03 Nights, Nubra Valley 02 Night, Pangong 01 Night",
+    permits: "Inner Line permits/ Wild Life Fees",
+    MedicalSupport:
+      "Medical support if needed, Necessary medical/ vitamin tablets",
+    costExcludes:
+      "Oxygen cylinder, Flight charge, Monastery Entrance at all places of visit, Garden / Monument / Monastery Entrance fees., Car racing activity charge (Nubra Valley), Camel Safari at Hunder (Nubra Valley), Expenses of personal nature such as Tips, Laundry, Telephone, etc., Any other SS tours not mentioned in the program.",
+    OtherDetails:
+      "Hotel: 4/3/2-star hotels and 3/2-star camps, Vehicle: Traveller/ Innova/ Xylo/ XUV/ Eco van/ Bike, Guide: If needed, Expected temperature: Between -5 degrees to 10 degrees, Necessary dress: Winter Jacket, Shoes, Thermal wear, Snacks will be provided as lunch for 3 days during the six-day journey on request if needed due to the lack of availability of cooked food. People can have food from local shops at their own risk, as it may cause digestion problems., Oxygen masks and necessary tablets will be provided by the tour coordinator.",
+    TermsAndConditions:
+      "Covid-19 protocols for tourists (May change at any time), Charges for the RT-PCR test should be carried on their own., Extra medical expenses should be carried on their own., People having health issues/ Above 50/ can come at their own risk., RT-PCR test report taken 72 hours prior to the travel date is mandatory., The passengers who don’t have RT-PCR negative test reports must be vaccinated against, COVID-19, in order to visit the tourist spots/public places and must be wearing double masks,",
+    day: 7,
+    night: 6,
+    food: "7 Breakfast, 6 Dinner, 1 Lunch, 2 water bottles per day",
+    createdAt: "2024-03-07T10:15:00Z",
+    updatedAt: "2024-03-07T10:15:00Z",
   },
-  {
-    heading: "Desert Glamping Experience",
-    image: "https://c8.alamy.com/comp/E88XP1/namgyal-tsemo-gompa-leh-ladakh-india-asia-E88XP1.jpg",
-    description: "Experience the beauty of the desert in luxury glamping tents under the stars.",
-    price: "1200",
-    orginalPrice: "1500",
-    roomRating: 4.4,
-    day: 3,
-    night: 2,
-    foodTime: 2,
-    city: "Sahara",
-    state: "Morocco",
-    createdAt: "2024-03-05T09:00:00Z",
-    updatedAt: "2024-03-05T09:00:00Z"
-  }
 ];
 
 export default function Packages() {
@@ -209,19 +471,19 @@ export default function Packages() {
             return (
               <div>
                 <Package
-               heading={data.heading}
-               image={data.image}
-               description={data.description}
-               price={data.price}
-               orginalPrice={data.orginalPrice}
-               roomRating={data.roomRating}
-               day={data.day}
-               night={data.night}
-               foodTime={data.foodTime}
-               city={data.city}
-               state={data.state}
-               createdAt={data.createAt}
-               updatedAt={data.updatedAt}
+                    heading={data.heading}
+                    image={data.subPackage[0].image}
+                    description={data.description}
+                    price={data.price}
+                    orginalPrice={data.orginalPrice}
+                    roomRating={data.roomRating}
+                    day={data.day}
+                    night={data.night}
+                    foodTime={data.foodTime}
+                    city={data.city}
+                    state={data.state}
+                    createdAt={data.createAt}
+                    updatedAt={data.updatedAt}
                 />
               </div>
             );
