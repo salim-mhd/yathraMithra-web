@@ -227,7 +227,7 @@ export default function PackageManagment() {
         {isOpenPopup && (
           <div className="add-popup">
             <div className="position-absolute z-3 top-0 bottom-0 m-5 w-75 border border-2 rounded p-3 bg-light overflow-auto">
-            <div className="position-absolute z-3 top-0 end-0 m-4">
+            <div className="position-fixed z-3">
                   <CloseButton onClick={handlePopupClose} />
                 </div>
                 <form className="p-3">
@@ -249,31 +249,19 @@ export default function PackageManagment() {
                     </div>
                   </div>
                   <div className="col-md-5 col-12">
-                    <div className="row m-">
-                    <label htmlFor="duration" className="form-label mt-2">
-                      Heading
-                    </label>
+                    <div className="row">
                     <div id="duration" className="d-flex">
-                    <div  className="col-6 col-md-3 m-1">
-                      <Form.Select aria-label="Default select example" onChange={(e)=>{setDay(parseInt(e.target.value))}}>
-                        <option>Day</option>
-                        <option value='1'>1</option>
-                        <option value="2" >2</option>
-                        <option value="3" >3</option>
-                        <option value="4" >4</option>
-                        <option value="5" >5</option>
-                      </Form.Select>
-
-                    </div>
                     <div className="col-6 col-md-3 m-1">
-                      <Form.Select aria-label="Default select example" onChange={(e)=>{setNight(parseInt(e.target.value))}}>
-                        <option>Night</option>
-                        <option value='1' >1</option>
-                        <option value="2"  >2</option>
-                        <option value="3"  >3</option>
-                        <option value="4"  >4</option>
-                        <option value="5"  >5</option>
-                      </Form.Select>
+                    <label htmlFor="day" className="form-label mt-2">
+                      Day
+                    </label>
+                      <input type="number" id="day" className="form-control" value={day} onChange={(e)=>{setDay(parseInt(e.target.value))}}/>
+</div>
+                    <div className="col-6 col-md-3 m-1">
+                    <label htmlFor="night" className="form-label mt-2">
+                      Night
+                    </label>
+                      <input type="number" id="night" className="form-control" value={night} onChange={(e)=>{setNight(parseInt(e.target.value))}}/>
 </div>
                     </div>
                     </div>
@@ -287,23 +275,139 @@ export default function PackageManagment() {
                   </div>
                   </div>
 
-                  <div className="package-acivities">
+                  <div className="package-acivities p-4">
+                  <div className="d-flex my-3 flex-wrap align-items-center justify-content-between">
+                  <div className="col-md-7 col-12">
+                    <div>
+                    <label htmlFor="name" className="form-label mt-2">
+                      Heading
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={heading}
+                      onChange={(e) => {
+                        setHeading(e.target.value);
+                      }}
+                      id="name"
+                    />
+                    </div>
+                  </div>
+                  <div className="col-md-4 col-12 m-1">
+                    <div className="row">
+                    <label htmlFor="image" className="form-label mt-2">
+                      Image
+                    </label>
+                    <div id="image" className="d-flex">
+                    <div  className="">
+                    <input
+                      type="file"
+                      className="form-control"
+                      id="image"
+                    />
+                    </div>
+                    </div>
+                    </div>
+                    {/* <input
+                      type="file"
+                      name="image"
+                      id="imageInput"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                    /> */}
+                  </div>
+                  </div>
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control h-50"
+                      placeholder="Leave a comment here"
+                      id="packageDescription"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="packageDescription">
+                      Description
+                    </label>
+                  </div>
+
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control h-50"
+                      placeholder="Leave a comment here"
+                      id="otherDetails"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="otherDetails">
+                      Other Details
+                    </label>
+                  </div>
 
                   </div>
+
+<h3 className="fw-bold my-5">Cost Includes</h3>
                   <div className="form-floating mb-4">
                     <textarea
                       className="form-control"
                       placeholder="Leave a comment here"
-                      id="floatingTextarea2"
-                      value={description}
-                      onChange={(e) => {
-                        setDescription(e.target.value);
-                      }}
+                      id="transpotation"
                     ></textarea>
-                    <label className="ms-3" htmlFor="floatingTextarea2">
-                      Description
+                    <label className="ms-3" htmlFor="transpotation">
+                      Transpotation
                     </label>
                   </div>
+
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                      id="accommodation"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="accommodation">
+                      Accommodation
+                    </label>
+                  </div>
+
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                      id="food/person"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="food/person">
+                      Food/person
+                    </label>
+                  </div>
+
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                      id="permits"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="permits">
+                      Permits and Entry
+                    </label>
+                  </div>
+
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                      id="medical"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="medical">
+                      Medical Support
+                    </label>
+                  </div>
+
+                  <div className="form-floating mb-4">
+                    <textarea
+                      className="form-control"
+                      placeholder="Leave a comment here"
+                      id="cost"
+                    ></textarea>
+                    <label className="ms-3" htmlFor="cost">
+                      Medical Support
+                    </label>
+                  </div>
+
                   <div className="row">
                     <div className="mb-3 col-md-6">
                       <label htmlFor="name" className="form-label">
