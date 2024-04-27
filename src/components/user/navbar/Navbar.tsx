@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
-import logo from "../../../assets/logo.png";
+import logoColor from "../../../assets/Image_20240428_023543_066-removebg-preview.png";
+import logoWite from "../../../assets/logo.png";
 import { CgMenuGridO } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
@@ -37,7 +38,7 @@ const Navbar: React.FC<NavbarComponent> = ({ option }) => {
     <>
       <div className={`Navbar ${showColor ? "show-color" : ""}`}>
         <div>
-          <img src={logo} alt="Logo" height={60} className="pb-2 m-2 logo" />
+          <img src={ showColor ?  logoWite : logoColor} alt="Logo" height={60} width={150} className="pb-2 m-2 logo" />
         </div>
         <div>
         <div className="d-flex menu">

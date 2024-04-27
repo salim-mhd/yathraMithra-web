@@ -6,34 +6,34 @@ import { FaArrowRight } from "react-icons/fa";
 
 const slides: Slide[] = [
   {
-    eachSlide:
-      "url(https://media.istockphoto.com/id/652147598/photo/panorama-of-a-nature-and-landscape-view-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=OAub9_gk0T10jIcM4HXiygFfn_xDChfrNkab-5xnj4c=)",
+    eachSlide: `url(https://www.kosha.co/journal/wp-content/uploads/2021/11/Experience-Leh-in-Winter.jpg)`,
     heading: "Live your life by a compass not a clock..",
     paragraph: "Explore the beauty of nature.",
   },
   {
     eachSlide:
-      "url(https://media.istockphoto.com/id/916575772/photo/namgyal-tsemo-gompa-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=MAdxcJNbCD7lcTB0t7NEWCc_hn16EZBKzyYoabr3pno=)",
+      "url(https://vargiskhan.com/log/wp-content/uploads/2020/09/shey-monastery.jpg)",
     heading: "Jobs fill your pocket, but adventures fill your soul.",
     paragraph: "Explore the beauty of nature.",
   },
   {
-    eachSlide: `url(https://t3.ftcdn.net/jpg/00/81/87/90/360_F_81879087_a1G8MBDBLSnvJ9IBBeMNbnitOGweBinb.jpg)`,
+    eachSlide:
+    "url(https://www.thegranddragonladakh.com/blog/admin/assets/img/post/image_2023-08-22-05-49-39_64e44c731bc7e.jpg)",
     heading: "A journey of a thousand miles begins with a single step.",
     paragraph: "Explore the beauty of nature.",
   },
   {
-    eachSlide: `url(https://media.istockphoto.com/id/652147598/photo/panorama-of-a-nature-and-landscape-view-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=OAub9_gk0T10jIcM4HXiygFfn_xDChfrNkab-5xnj4c=)`,
+    eachSlide: `url(https://static.toiimg.com/photo/64764925.cms)`,
     heading: "Life is either a daring adventure or nothing at all.",
     paragraph: "Explore the beauty of nature.",
   },
   {
-    eachSlide: `url(https://media.istockphoto.com/id/916575772/photo/namgyal-tsemo-gompa-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=MAdxcJNbCD7lcTB0t7NEWCc_hn16EZBKzyYoabr3pno=)`,
+    eachSlide: `url(https://cdn.britannica.com/72/124772-050-02974A7A/Palace-kings-Leh-Ladakh-India-Jammu-and.jpg)`,
     heading: "Blessed are the curious for they shall have adventures.",
     paragraph: "Explore the beauty of nature.",
   },
   {
-    eachSlide: `url(https://wallpaperaccess.com/full/1844101.jpg)`,
+    eachSlide: `url(https://cdn.tourradar.com/s3/tour/1500x800/213732_60250bb955891.jpg)`,
     heading: "Take only memories, leave only footprints.",
     paragraph: "Explore the beauty of nature.",
   },

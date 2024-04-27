@@ -3,15 +3,13 @@ import "./Packages.scss";
 import Navbar from "../../../components/user/navbar/Navbar";
 import Package from "../../../components/user/package/Package";
 import Footer from "../../../components/user/footer/Footer";
-import ReactPaginate from "react-paginate";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 // import { packageInterface } from "../../../interface/Interface";
 // import { base_url } from "../../../constants/staticData";
 // import axios from "axios";
 
 const packageMockdata = [
-
-
   {
     heading: "LEH LADAKH, NUBRA, PANGONG",
     subPackage: [
@@ -21,7 +19,7 @@ const packageMockdata = [
         description:
           "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
         image:
-          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/3/3c/Aerial_View_of_Leh_Kushok_Bakula_Rinpoche_Airport_%28IXL%29_Ladakh_Jammu_%26_Kashmir_India.jpg",
         others:
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
@@ -31,7 +29,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://vargiskhan.com/log/wp-content/uploads/2020/09/shey-monastery.jpg",
         others:
           "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
       },
@@ -41,7 +39,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://miro.medium.com/v2/resize:fit:1000/1*noCskj8yVY-c6RPmj6-j5w.jpeg",
         others:
           "(Breakfast at the hotel in Leh, Dinner and overnight stay at the Camp/ Hotel in Nubra, Lunch will be basic veg-food on the way to Nubra)",
       },
@@ -51,7 +49,7 @@ const packageMockdata = [
         description:
           "Nubra Camp/ Hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp/ Hotel at Pangong",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://static.toiimg.com/photo/92360678.cms",
         others:
           "(Breakfast at Nubra Camp/ Hotel, Dinner and overnight stay at the Camp/ Hotel in Pangong, Lunch will be basic veg-food on the way to Pangong)",
       },
@@ -61,7 +59,7 @@ const packageMockdata = [
         description:
           "Camp/ Hotel at Pangong - Spangmik Glacier - Snow Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh Hotel",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://cdn.kimkim.com/files/a/content_articles/featured_photos/2afe680f438ab7f31cad3426fb31d277e8f1fe16/big-0c8da4b55236092e6fa7fb32290e9a7f.jpg",
         others:
           "(Breakfast at Pangong Camp/ Hotel, Dinner and overnight stay at the hotel in Leh, Lunch will be basic veg-food on the way to Leh)",
       },
@@ -100,7 +98,7 @@ const packageMockdata = [
         description:
           "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
         image:
-          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/3/3c/Aerial_View_of_Leh_Kushok_Bakula_Rinpoche_Airport_%28IXL%29_Ladakh_Jammu_%26_Kashmir_India.jpg",
         others:
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
@@ -110,7 +108,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://discoverwithdheeraj.com/wp-content/uploads/2014/10/234.jpg",
         others:
           "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
       },
@@ -120,7 +118,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride Hunder - Nubra Camp/ Hotel",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/7/75/5_Nubra_valley.jpg",
         others:
           "(Breakfast at the camp/ hotel in Leh, Dinner and overnight stay at the camp/ hotel in Nubra)",
       },
@@ -130,7 +128,7 @@ const packageMockdata = [
         description:
           "Nubra Camp - Turtuk village - Nubra Camp",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/537468864.jpg?k=705be971cd8c604cb3f69fd1e74a8a5c507580caf5a708c80cabf05f1c74c200&o=&hp=1",
         others:
           "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp/ hotel in Nubra)",
       },
@@ -140,7 +138,7 @@ const packageMockdata = [
         description:
           "Nubra camp/ hotel - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - camp/ hotel at Pangong",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://www.singgepalace.com/leh-holiday-packages/img/nubra-valley-pangong-lake-6days-tour.jpg",
         others:
           "(Breakfast at Nubra camp/ hotel, Dinner and overnight stay at the camp/ hotel in Pangong)",
       },
@@ -150,7 +148,7 @@ const packageMockdata = [
         description:
           "Camp/ hotel at Pangong - Spangmik Glacier -cSnow‐Capped Peaks - Chang La Pass of 17380 ft - Thikse monastery - Rancho School - Leh market visit - Leh Hotel",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://img.jagranjosh.com/images/2022/April/1242022/pangong-lake-ladakh.jpg",
         others:
           "(Breakfast at Pangong camp/ hotel, Dinner and overnight stay at the hotel in Leh)",
       },
@@ -189,7 +187,7 @@ const packageMockdata = [
         description:
           "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
         image:
-          "https://www.kosha.co/journal/wp-content/uploads/2021/11/Leh-in-Winter.jpg",
+          "https://www.thethumpingnomad.com/wp-content/uploads/2022/12/20_the-thumping-nomad-leh-airport.jpg",
         others:
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
@@ -199,7 +197,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Shanti Stupa – Leh Palace - Market visit - Stay at hotel in Leh",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://www.srutitravels.com/wp-content/uploads/2019/05/0009-Ladakh-Monasteries.jpg",
         others:
           "(Breakfast, dinner and overnight stay at the hotel in Leh)",
       },
@@ -209,7 +207,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Lamayuru- Kargil - Drass - Leh hotel",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/01/srinagar-1641977317.jpg",
         others:
           "(Breakfast in Leh hotel & Dinner and overnight stay at the hotel in Leh)",
       },
@@ -219,7 +217,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride - Nubra Camp in Hunder",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://media2.thrillophilia.com/images/photos/000/140/695/original/1644664936_shutterstock_403925773.jpg?gravity=center&width=1280&height=642&crop=fill&quality=auto&fetch_format=auto&flags=strip_profile&format=jpg&sign_url=true",
         others:
           "(Breakfast at the Homestay in Stok, Dinner and overnight stay at the camp in Hunder, Nubra)",
       },
@@ -229,7 +227,7 @@ const packageMockdata = [
         description:
           "Nubra Camp - Turtuk village - Nubra Camp",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/1/1a/River_Shyok%2C_Turtuk_Village%2C_Ladakh.JPG",
         others:
           "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp in Nubra)",
       },
@@ -239,7 +237,7 @@ const packageMockdata = [
         description:
           "Nubra Camp - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp at Pangong, Tangse",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://media2.thrillophilia.com/images/photos/000/379/854/original/1646143966_Pangong_Lake.jpg?gravity=center&width=1280&height=642&crop=fill&quality=auto&fetch_format=auto&flags=strip_profile&format=jpg&sign_url=true",
         others:
           "(Breakfast at Nubra Camp, Dinner and overnight stay at Hotel at Pangong, Tangse)",
       },
@@ -249,7 +247,7 @@ const packageMockdata = [
         description:
           "Hotel at Tanste, Pangong - Hanleh Homestay",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://explorewithbob.com/wp-content/uploads/2020/10/DSC_7936-scaled.jpg",
         others:
           "(Breakfast at Hotel at Pangong, Dinner and overnight stay at Hanleh Homestay)",
       },
@@ -259,7 +257,7 @@ const packageMockdata = [
         description:
           "Homestay in Hanle - Umling la - Homestay in Tso Moriri",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://unpluggedlife.in/wp-content/uploads/2020/11/Unplugged_Life_Changthang_2-1-1024x781.jpg",
         others:
           "(Breakfast at Hotel in Hanle, Dinner and overnight stay at the homestay in Tso Moriri)",
       },
@@ -269,7 +267,7 @@ const packageMockdata = [
         description:
           "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://www.transformingtravels.com/wp-content/uploads/2021/10/Tso-Moriri-1920x960.jpg",
         others:
           "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
       },
@@ -308,7 +306,7 @@ const packageMockdata = [
         description:
           "Arrive at Leh, Meet & greet and transfer to the hotel. Relax for the rest of the day to acclimatize to the rarefied air of the high Himalayan Plateau.",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://image.jimcdn.com/app/cms/image/transf/dimension=origxorig:format=jpg/path/sd0ec2ac8818fe1ad/image/ia4d3b9d66670c2e2/version/1351279010/image.jpg",
         others:
           "(Breakfast, Lunch & Dinner at hotel, Overnight stay at the hotel in Leh)",
       },
@@ -318,7 +316,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Shanti Stupa – Leh Palace - Market visit - Stay at hotel in Leh",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://www.go2ladakh.in/img/shared/gallery/28a3d6951d94be8c08426de8da80e78b.jpg",
         others:
           "(Breakfast, dinner and overnight stay at the hotel in Leh)",
       },
@@ -328,7 +326,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Lamayuru- Kargil - Drass - Leh hotel",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6f/Lamayuru_1.JPG",
         others:
           "(Breakfast in Leh hotel & Dinner and overnight stay at the hotel in Leh)",
       },
@@ -338,7 +336,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Kartungla Pass 18380 ft (Highest motor ridable point in the world) - Car / Bike racing - Double Humped Camel Ride - Nubra Camp in Hunder",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://discoverlehladakh.in/wp-content/uploads/2020/06/Khardung-la-pass.jpg",
         others:
           "(Breakfast at the Homestay in Stok, Dinner and overnight stay at the camp in Hunder, Nubra)",
       },
@@ -348,7 +346,7 @@ const packageMockdata = [
         description:
           "Nubra Camp - Turtuk village - Nubra Camp",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://travellingslacker.com/wp-content/uploads/2018/09/Nubra-Turtuk-66.jpg",
         others:
           "(Breakfast at the Nubra Camp, Snacks in the middle of the journey, Dinner and overnight stay at the camp in Nubra)",
       },
@@ -358,7 +356,7 @@ const packageMockdata = [
         description:
           "Nubra Camp - Diskit Monastery - Agham Shyok Road - Indus Valley - Pangong Lake - Camp at Pangong,Tangse",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b9/e6/1c/nubra-valley.jpg?w=1200&h=-1&s=1",
         others:
           "(Breakfast at Nubra Camp, Dinner and overnight stay at Hotel at Pangong, Tangse)",
       },
@@ -368,7 +366,7 @@ const packageMockdata = [
         description:
           "Hotel at Tanste, Pangong - Hanleh Homestay",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/9c/3c/c8/tangtse-gompa.jpg?w=1200&h=-1&s=1",
         others:
           "(Breakfast at Hotel at Pangong, Dinner and overnight stay at Hanleh Homestay)",
       },
@@ -378,7 +376,7 @@ const packageMockdata = [
         description:
           "Homestay in Hanle - Umling la - Homestay in Tso Moriri",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://discoverlehladakh.in/wp-content/uploads/2022/12/Bikers-at-Umling-La-pass.jpg",
         others:
           "(Breakfast at Hotel in Hanle, Dinner and overnight stay at the homestay in Tso Moriri)",
       },
@@ -388,7 +386,7 @@ const packageMockdata = [
         description:
           "Homestay in Tso Moriri - Thikse monastery - Shey palace - Rancho school - Homestay in Tso Moriri",
         image:
-          "https://media.assettype.com/outlooktraveller%2F2023-11%2Ff8ceeeb7-5ea8-434b-b9ef-be4bf7f02670%2Fshutterstock_755658937.jpg",
+          "https://discoverlehladakh.in/wp-content/uploads/2020/11/Rancho-school-wall-at-Shey-in-Leh-Ladakh.jpg",
         others:
           "(Breakfast at the Homestay in Tso Moriri, Dinner and overnight stay at the hotel in Leh)",
       },
@@ -426,22 +424,59 @@ const packageMockdata = [
   }
 ];
 
+interface SubPackage {
+  day: number;
+  heading: string;
+  description: string;
+  image: string;
+  others: string;
+}
+
+interface TourDetails {
+  heading: string;
+  subPackage: SubPackage[];
+  transportation: string;
+  accommodation: string;
+  permits: string;
+  MedicalSupport: string;
+  costExcludes: string;
+  OtherDetails: string;
+  TermsAndConditions: string;
+  day: number;
+  night: number;
+  food: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export default function Packages() {
+  // this state for store popup status.
+  const [isOpenPopup, setIsOpenPopup] = useState<boolean>(false);
+
   // this state for store Package Details
   const [packagesData, setPackagesData] = useState(packageMockdata);
 
-  // this fcunction using for fetch package Details
-  // const fetPackgeDetails = async () => {
-  //   let res = await axios.get(`${base_url}/package`);
-  //   console.log("res", res.data.packagesDetails);
-  //   let responseData = res.data.packagesDetails;
-  //   setPackagesData(responseData);
-  // };
+  // this state for store selected package data
+  const [selectdPackage, setSelectedPackage] = useState<TourDetails | null>(
+    null
+  );
+
+  // this fuction using for show values is the popup
+  const handleShowDetails = (data: any) => {
+    setIsOpenPopup(true);
+    setSelectedPackage(data);
+  };
 
   useEffect(() => {
-    // fetPackgeDetails();
     setPackagesData(packageMockdata);
   }, []);
+
+  const navigage = useNavigate();
+
+  const accommodations = selectdPackage?.accommodation.split(", ");
+  const food = selectdPackage?.food.split(", ");
+  const costExcludes = selectdPackage?.costExcludes.split(", ");
+  const OtherDetails = selectdPackage?.OtherDetails.split(", ");
 
   return (
     <div className="Packages">
@@ -451,30 +486,147 @@ export default function Packages() {
           <div className="heading">All Packages</div>
           <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
         </div>
-        <div className="d-flex align-items-center justify-content-end mx-5">
-          {/* <div className="fs-5 fw-bold">Package</div> */}
-          {/* Pagination */}
-          <ReactPaginate
-            previousLabel={<FaArrowLeft />}
-            nextLabel={<FaArrowRight />}
-            breakLabel={"..."}
-            breakClassName={"break-me"}
-            pageCount={0}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={2}
-            // onPageChange={handlePaginationClick}
-            containerClassName={"pagination"}
-            activeClassName={"active"}
-          />
-        </div>
 
-        <div className="d-flex mb-5 align-items-center flex-wrap justify-content-center">
-          {packagesData.map((data: any) => {
-            return (
-              <div>
-                <Package
+        <div className="m-4">
+      {isOpenPopup && (
+        <div className="main-popup-container">
+                  <div className="popup-container">
+                  <div className="button-container">
+                  <AiOutlineClose color="#53004c" size={40} onClick={() => {
+                    setIsOpenPopup(false);
+                  }}/>
+                    <div className="close-button fs-1" >
+                    
+                    </div>
+              </div>
+                        <div className="p-3 border border-2 rounded bg-light popup-content">
+                <div className="text-center my-5">
+                  <div className="my-3 fs-3 fw-bold">
+                    {selectdPackage?.heading}
+                  </div>
+                  <div className="my-3 fs-5 fw-bold">
+                    {selectdPackage?.night} Nights, {selectdPackage?.day}, Days
+                  </div>
+                </div>
+                {selectdPackage &&
+                  selectdPackage?.subPackage.map((data, index) => (
+                    <div
+                      key={index}
+                      className="d-flex align-items-center justify-content-center m-5 row"
+                    >
+                      {data.image && (
+                      <img
+                        className="rounded view-package-image col-md-6"
+                        src={data.image}
+                        alt=""
+                      />
+                      )}
+                      <div className="col-md-6">
+                        <div className="my-3 fw-bold">
+                          <div className="fs-3">Day {data.day}</div>
+                          <div className="fs-5">{data.heading}</div>
+                        </div>
+                        <div className="my-3">{data.description}</div>
+                        <div className="my-3">{data.others}</div>
+                      </div>
+                    </div>
+                  ))}
+                <div className="m-5">
+                  <div className="fs-2 fw-bold text-center text-decoration-underline">
+                    Cost Includes:
+                  </div>
+                  <div className="m-3">
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Transportation</div>
+                      <div className="m-3">
+                        {selectdPackage?.transportation}
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">
+                        Accommodation (2/3 Sharing)
+                      </div>
+                      <div className="m-3">
+                        {accommodations &&
+                          accommodations.map((accommodation, index) => (
+                            <div key={index}>{accommodation}</div>
+                          ))}
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Food/Person</div>
+                      <div className="m-3">
+                        {food &&
+                          food.map((food, index) => (
+                            <div key={index}>{food}</div>
+                          ))}
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">
+                        Permits and Entry fees
+                      </div>
+                      <div className="m-3">{selectdPackage?.permits}</div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Medical support</div>
+                      <div className="m-3">
+                        {selectdPackage?.MedicalSupport}
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <div className="fs-4 fw-bold mb-1">Cost Excludes</div>
+                      <div className="m-3">
+                        {costExcludes &&
+                          costExcludes.map((costExcludes, index) => (
+                            <div key={index}>{costExcludes}</div>
+                          ))}
+                      </div>
+                      <div className="my-3">
+                        <div className="fs-4 fw-bold mb-1">Other details</div>
+                        <div className="m-3">
+                          {OtherDetails &&
+                            OtherDetails.map((OtherDetails, index) => (
+                              <div key={index}>{OtherDetails}</div>
+                            ))}
+                        </div>
+                      </div>
+                      <div className="text-center my-5">
+                        <div className="fs-4 fw-bold mb-1">
+                          Terms and conditions
+                        </div>
+                        <p>{selectdPackage?.TermsAndConditions}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center my-5">
+                  <button
+                    className="button"
+                    onClick={() => {
+                      navigage("/contact");
+                    }}
+                  >
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+        </div>
+        </div>
+      )}
+
+          <div className="d-flex flex-wrap">
+            {packagesData.map((data: any, index: number) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => {
+                    handleShowDetails(data);
+                  }}
+                >
+                  <Package
                     heading={data.heading}
-                    image={data.subPackage[0].image}
+                    image={data.subPackage[1].image}
                     description={data.description}
                     price={data.price}
                     orginalPrice={data.orginalPrice}
@@ -486,11 +638,13 @@ export default function Packages() {
                     state={data.state}
                     createdAt={data.createAt}
                     updatedAt={data.updatedAt}
-                />
-              </div>
-            );
-          })}
-        </div>
+                  />
+                </div>
+              );
+            })}
+          </div>
+        
+    </div>
       </div>
       <Footer />
     </div>

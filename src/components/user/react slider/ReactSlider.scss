@@ -132,6 +132,7 @@ $background-color-hover: #ff00ea;
         position: absolute;
         top: 20%;
         left: 0;
+        right: 0;
         z-index: 9995;
         color: white;
 
@@ -155,7 +156,7 @@ $background-color-hover: #ff00ea;
                 }
 
                 @media (max-width: 540px) {
-                    font-size: 2.2rem;
+                    font-size: 2.6rem;
                 }
             }
 
@@ -183,11 +184,11 @@ $background-color-hover: #ff00ea;
         }
 
         @media (max-width: 540px) {
-            top: 18%;
+            top: 16%;
         }
 
         @media (max-width: 400px) {
-            top: 10%;
+            top: 5%;
         }
     }
 
