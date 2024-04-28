@@ -12,6 +12,7 @@ import LoginPage from '../pages/admin/loginPage/LoginPage';
 import BlogManagment from '../pages/admin/blog managment/BlogManagment';
 import Dashbord from '../pages/admin/dashbord/Dashbord';
 import PackageManagment from '../pages/admin/package managment/PackageManagement';
+import Gallery from '../pages/user/gallery/Gallery';
 
 // This is app funciton
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/blog" element={<Blogs />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
 
           <Route path="/admin" element={<LoginPage />} />
           <Route path="/admin/dashboard" element={<Dashbord />} />

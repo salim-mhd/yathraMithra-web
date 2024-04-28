@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarComponent> = ({ option }) => {
               option === "gallery" ? "active" : ""
             }`}
             onClick={() => {
-              navigate("/");
+              navigate("/gallery");
             }}
           >
             Gallery

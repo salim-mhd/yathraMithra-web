@@ -626,7 +626,7 @@ function PackagesComponent() {
         <div className="heading-container">
           <div>
             <div className="heading">New Packages</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div>Discover an array of our tour packages, exclusively tailored for you here at Yathramithra.</div>
           </div>
           <div className="d-flex align-itmes-center my-2">
             <div className="icon-left me-3">

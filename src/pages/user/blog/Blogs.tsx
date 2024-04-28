@@ -68,11 +68,11 @@ export default function Blogs() {
         <div className="blog-heading-container">
         <div className="heading">Our Best Blogs</div>
         <div className="paragraph">
-          Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor
+        Explore a selection of our finest travel blogs.
         </div>
         </div>
-        <div className="m-4 text-center">
-          <div className="d-flex flex-wrap align-items-center">
+        <div className="m-4">
+          <div className="d-flex flex-wrap align-items-center justify-content-center">
             {blogDeta.map((blog: any, index :number)=>(
             <div key={index}>
             <BlogComponent heading={blog.heading} content={blog.content} image={blog.image} createDate={blog.createdAt}  />

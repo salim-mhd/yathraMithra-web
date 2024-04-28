@@ -15,6 +15,7 @@ import GalleryHeading from "../../../components/user/gallery heading component/G
 import ReactPlayer from "react-player";
 import BlogComponent from "../../../components/user/blog/Blog";
 import { blog } from "../../../interface/Interface";
+import { useNavigate } from "react-router-dom";
 // import axios from "axios";
 // import { base_url } from "../../../constants/staticData";
 
@@ -114,6 +115,8 @@ export default function Home() {
     setBlogData(blogMockData);
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <div className="Home">
       <Navbar option="home" />
@@ -128,9 +131,14 @@ export default function Home() {
         <div className="gallery-heading-container">
           <div className="text">
             <div className="text-heading">Destination Gallery</div>
-            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+            <div>
+              A curated photo gallery showcasing just a glimpse of the myriad
+              breathtaking destinations available.
+            </div>
           </div>
-          <button className="button">
+          <button onClick={() => {
+              navigate("/gallery");
+            }} className="button">
             <div className="me-2">View All</div>
             <IoArrowForward className="fs-5" />
           </button>
@@ -151,55 +159,20 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="Fecilities-container">
-        <div className="fecilities-heading"></div>
-        <div className="fecilities-content">
-          <div className="icon-text-container">
-            <div className="icon-container">
-              <GiVacuumCleaner className="icon" />
-            </div>
-            <div className="py-2">
-              <div className="fw-bold fs-4 my-2">Room Cleaning</div>
-              <div className="w-50 mx-auto">
-                Proin massa augue, lacinia at blandit ac, fringilla scelerisque
-                tortor
-              </div>
-            </div>
-          </div>
-          <div className="icon-text-container">
-            <div className="icon-container">
-              <BsRouter className="icon" />
-            </div>
-            <div className="py-2">
-              <div className="fw-bold fs-4 my-2">Room Wifi</div>
-              <div className="w-50 mx-auto">
-                Proin massa augue, lacinia at blandit ac, fringilla scelerisque
-                tortor
-              </div>
-            </div>
-          </div>
-          <div className="icon-text-container">
-            <div className="icon-container">
-              <LiaTruckPickupSolid className="icon" />
-            </div>
-            <div className="py-2">
-              <div className="fw-bold fs-4 my-2">Pickup & Drop</div>
-              <div className="w-50 mx-auto">
-                Proin massa augue, lacinia at blandit ac, fringilla scelerisque
-                tortor
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="Blog-container">
         <div className="blog-heading-container">
-          <div className="text-heading">Our Best Blogs</div>
-          <div>
-            Proin massa augue, lacinia at blandit ac, fringilla scelerisque
-            tortor
-          </div>
+
+<div>
+<div className="text-heading">Our Best Blogs</div>
+          <div>Explore a selection of our finest travel blogs.</div>
+</div>
+
+          <button onClick={() => {
+              navigate("/blog");
+            }} className="button">
+            <div className="me-2">View All</div>
+            <IoArrowForward className="fs-5" />
+          </button>
         </div>
         <div className="blog-container">
           <div className="blog">

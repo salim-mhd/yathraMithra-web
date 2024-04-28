@@ -484,7 +484,7 @@ export default function Packages() {
       <div className="package-container">
         <div className="package-heading-container">
           <div className="heading">All Packages</div>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div className="paragraph">Discover an array of our tour packages, exclusively tailored for you here at Yathramithra.</div>
         </div>
 
         <div className="m-4">

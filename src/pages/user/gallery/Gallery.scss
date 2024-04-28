@@ -1,9 +1,8 @@
-$background-color: #79006e;
+.Gallery{
+    .gallery-container {
+        // margin: 8% 50px;
 
-.Contact{
-    .contact-container{
-
-        .contact-heading-container{
+        .gallery-heading-container {
             color: white;
             padding: 20% 0;
             background-image: url('https://www.kosha.co/journal/wp-content/uploads/2021/11/Experience-Leh-in-Winter.jpg');
@@ -27,12 +26,26 @@ $background-color: #79006e;
                 font-size: 1rem;
                 font-weight: 600;
                 text-shadow: 1px .5px black;
+                margin: 5px;
             }
         }
-        .button{
-            border: none;
-            background-color: $background-color;
-            color: white;
+
+        .gallery-component-container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 40%;
+
+            .gallery-component{
+                width: 50%;
+
+                @media (max-width: 760px) {
+                width: 100%;
+                    
+                }
+    
+            }
         }
     }
 }
