@@ -12,7 +12,7 @@ const slides: Slide[] = [
   },
   {
     eachSlide:
-      "url(https://vargiskhan.com/log/wp-content/uploads/2020/09/shey-monastery.jpg)",
+      "url(https://assets-news.housing.com/news/wp-content/uploads/2022/08/11203201/ladakh-sightseeing-and-things-to-do-feature-compressed.jpg)",
     heading: "Jobs fill your pocket, but adventures fill your soul.",
     paragraph: "Explore the beauty of nature.",
   },

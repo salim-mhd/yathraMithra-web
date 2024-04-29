@@ -34,7 +34,7 @@ const packageMockdata = [
         description:
           "Leh hotel - Shanti Stupa – Leh Palace - Pathar Sahib Gurudwara - Magnetic Hill - Sangam - Spituk Monastery - Hall of fame - Stay at Hotel in Leh",
         image:
-          "https://vargiskhan.com/log/wp-content/uploads/2020/09/shey-monastery.jpg",
+          "https://media2.thrillophilia.com/images/photos/000/146/130/original/1644484000_shutterstock_1322170832.jpg?gravity=center&width=1280&height=642&crop=fill&quality=auto&fetch_format=auto&flags=strip_profile&format=jpg&sign_url=true",
         others:
           "(Breakfast & Dinner and overnight stay at the hotel in Leh)",
       },
