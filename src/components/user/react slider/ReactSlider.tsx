@@ -113,7 +113,7 @@ export default function ReactSlider() {
     </React.Fragment>
   );
 
-  return (
+return (
 <div className="ReactSlider">
       <section className="slider">
         <div className="wrapper" style={setSliderStyles()}>
@@ -135,4 +135,4 @@ export default function ReactSlider() {
       </section>
     </div>
   );
-}
+};

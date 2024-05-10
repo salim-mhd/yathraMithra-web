@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="contact-heading-container">
           <div className="heading">Contact Us</div>
           <div className="paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Feel free to get in touch with us for our steadfast assistance.
           </div>
         </div>
         <div className="text-center">
